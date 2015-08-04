@@ -1,0 +1,97 @@
+{
+  "Command": "d-Con.bat",
+  "Parameters": "./data_manager/create_user_spec.rb --or --no_rdb --csv %QAAUTOMATION_SCRIPTS%/GameStop/spec/Profile/profile_dataset.csv --range TFS68458 --svc %QAAUTOMATION_SCRIPTS%/Common/config/endpoints.csv --svc_env QA_V1",
+  "Interface": "REQ_XML"
+}
+
+The REQ_XML needs to comply with the Data Manager Request schema, following is an example of a request
+
+<request id="0">
+   <quantity>1</quantity>
+   <attributes>
+      <attribute>
+         <name>BILL_ADDR_STATE_ATTR</name>
+         <action>Use_or</action>
+         <values>
+            <value>AK</value>
+            <value>TX</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>BILL_DEFAULT_ADDR</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>HAS_CC</name>
+         <action>Use_or</action>
+         <values>
+            <value>Visa</value>
+			<value>MC</value>
+			<value>Amex</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>HAS_FNAME</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>HAS_LNAME</name>
+         <action>Generate</action>
+      </attribute>
+      <attribute>
+         <name>HAS_PHONE</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>HAS_STORENUM</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>MAIL_ADDR_STATE_ATTR</name>
+         <action>Use_or</action>
+         <values>
+            <value>Alaska</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>PROFILE_ATTR</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>PUR_TYPE</name>
+         <action>Use_or</action>
+         <values>
+            <value>No</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>ROLES</name>
+         <action>Use_or</action>
+         <values>
+            <value>CreateUser</value>
+         </values>
+      </attribute>
+      <attribute>
+         <name>SHIP_ADDR_STATE_ATTR</name>
+         <action>Use_or</action>
+         <values>
+            <value>NY</value>
+         </values>
+      </attribute>
+   </attributes>
+</request>

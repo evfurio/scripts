@@ -1,0 +1,9 @@
+server,url,user,password
+QA_Cart,,ottomatin+3store@gmail.com,Manh0le1
+QA_Community,,ottomatin+2store@gmail.com,Manh0le1
+QA_Developer,,ottomatin+6store@gmail.com,Manh0le1
+QA_Forums,,ottomatin+4store@gmail.com,Manh0le1
+Prod_Cart,,,
+Prod_Community,,,
+Prod_Developer,,,
+Prod_Forums,,,

@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<Tables>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_ADAPTERS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_APIS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_API_CONFIG"/>
+    <Table AverageNoOfRows="10000" AverageSize="8000" Name="INTEROP_ERROR_DISPATCH"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_INTEGRATION_SETUP"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_MESSAGE_SYSTEMS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_MSG_SYS_CONFIG"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="INTEROP_SYSTEMS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ACKNOWLEDGEMENT_DETAIL"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ACKNOWLEDGEMENT_DETAIL_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ACKNOWLEDGEMENT_HEADER"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ACKNOWLEDGEMENT_HEADER_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="360" Name="YFS_ACTION"/>
+    <Table AverageNoOfRows="1000" AverageSize="481"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ACTIVITY" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="866"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_ACTIVITY_CONSTRAINT" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="686"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ACTIVITY_DEMAND" WMSTable="Y"/>
+    <Table AverageNoOfRows="5000" AverageSize="0" Name="YFS_ADAPTER"/>
+    <Table AverageNoOfRows="0" AverageSize="200" Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+    <Table AverageNoOfRows="0" AverageSize="200" Name="YFS_ADDITIONAL_ATTRIBUTE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_ADDITIONAL_DATE"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_ADDITIONAL_DATE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="496"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_ADJUSTMENT_REASON" WMSTable="Y"/>
+    <Table AverageNoOfRows="2000" AverageSize="496"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_ADJUSTMENT_REASON_DTL" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="750" Name="YFS_AGENT_CRITERIA"/>
+    <Table AverageNoOfRows="10000" AverageSize="750" Name="YFS_AGENT_CRITERIA_TEMPLATE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_ALLOCATION_RULE"/>
+    <Table AverageNoOfRows="5000" AverageSize="250" Name="YFS_APPLICATION_MENU"/>
+    <Table AverageNoOfRows="5000" AverageSize="350" Name="YFS_ASSOCIATION"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_ATP_RULES"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_AUDIT"/>
+    <Table AverageNoOfRows="100" AverageSize="557" AvgNoOfRowsForNonIntegratedNodes="1" 				Name="YFS_AUTO_USER_CONSTRAINTS" WMSTable="Y"/>
+    <Table AverageNoOfRows="50" AverageSize="773"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_BARCODE_TRANSLATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="337"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_BASE_ACTIVITY_GROUP" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_BASE_COMMON_CODE"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_BASE_CONFIG_GRP_DEFN"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_BASE_CONFIG_TABLES"/>
+    <Table AverageNoOfRows="1000" AverageSize="5000" Name="YFS_BASE_DOCUMENT_PARAMS"/>
+    <Table AverageNoOfRows="50" AverageSize="4000" Name="YFS_BASE_DOCUMENT_TEMPLATE"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_BASE_EVENT"/>
+    <Table AverageNoOfRows="100" AverageSize="297"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_BASE_PACK_DO_NOT_MIX" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_BASE_PICKUP_DROP_STS"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_BASE_PROCESS_TYPE"/>
+    <Table AverageNoOfRows="100" AverageSize="550" Name="YFS_BASE_PURGE_CRITERIA"/>
+    <Table AverageNoOfRows="100" AverageSize="350" Name="YFS_BASE_RULES"/>
+    <Table AverageNoOfRows="100" AverageSize="297"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_BASE_SHIP_CONSTRAINTS" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_BASE_TRANSACTION"/>
+    <Table AverageNoOfRows="40" AverageSize="481"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_BATCH" WMSTable="Y"/>
+    <Table AverageNoOfRows="240" AverageSize="481"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_BATCH_H" WMSTable="Y"/>
+    <Table AverageNoOfRows="6000" AverageSize="312"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_BATCH_LOCATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="36000" AverageSize="312"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_BATCH_LOCATION_H" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="517"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_BATCH_RULE" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_BUSINESS_DOCUMENT"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_CALENDAR" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_CALENDAR_DAY_EXCP" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_CALENDAR_EXCP_SHIFT" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_CALENDAR_SHIFT" AvgNoOfRowsForNonIntegratedNodes="1" WMSTable="Y"/>
+    <Table AverageNoOfRows="5000" AverageSize="500" Name="YFS_CALENDAR_SHIFT_EFF_PERD" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_CARRIER"/>
+    <Table AverageNoOfRows="1000" AverageSize="300" Name="YFS_CARRIER_SERVICE"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_CARTON_TYPE"/>
+    <Table AverageNoOfRows="5000" AverageSize="0"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_CART_LOCATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_CATEGORY"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_CATEGORY_DOMAIN"/>
+    <Table AverageNoOfRows="" AverageSize="250" Name="YFS_CATEGORY_ITEM"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_CHANGE_REQUEST_DETAIL"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_CHANGE_REQUEST_HEADER"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_CHARGE_CATEGORY"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_CHARGE_NAME"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_CHARGE_TRANSACTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_CHARGE_TRANSACTION_H"/>
+    <Table AverageNoOfRows="50" AverageSize="347"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_CHUTE_DEDICATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="350" Name="YFS_CLASSIFICATION_PURPOSE"/>
+    <Table AverageNoOfRows="50000" AverageSize="400" Name="YFS_COMMON_CODE"/>
+    <Table AverageNoOfRows="20000" AverageSize="400" Name="YFS_CONDITION"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_CONDITION_VARIABLES"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_CONSUMER" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_CONTAINER_DETAILS"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_CONTAINER_DETAILS_H"/>
+    <Table AverageNoOfRows="50000" AverageSize="541"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_CONTAINER_STS_AUDIT" WMSTable="Y"/>
+    <Table AverageNoOfRows="300000" AverageSize="447"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_CONTAINER_STS_AUDIT_H" WMSTable="Y"/>
+    <Table AverageNoOfRows="30000" AverageSize="1020"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_COUNT_REQUEST" WMSTable="Y"/>
+    <Table AverageNoOfRows="30000" AverageSize="892"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_COUNT_RESULT" WMSTable="Y"/>
+    <Table AverageNoOfRows="30000" AverageSize="4592"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_COUNT_RESULT_TAG" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="910"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_COUNT_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_CREDIT_CARD_TRANSACTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_CREDIT_CARD_TRANSACTION_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_CURRENCY"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_CURRENCY_CONVERSION"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_CUSTOMER"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_DATA_SECURITY_DOC_TYPE"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_DATA_SECURITY_ENTERPRISE"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_DATA_SECURITY_GROUP"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_DATE_TYPE"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_DELIVERY_PLAN"/>
+    <Table AverageNoOfRows="10000" AverageSize="320"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_DEVICE" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="496"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_DEVICE_SUB_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="433"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_DEVICE_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="232"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_DEVICE_TYPE_TEMPLATE" WMSTable="Y"/>
+    <Table AverageNoOfRows="100000" AverageSize="300" Name="YFS_DISTRIBUTION_RULE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_DOCUMENT_FORMAT"/>
+    <Table AverageNoOfRows="1000" AverageSize="750" Name="YFS_DOCUMENT_PARAMS"/>
+    <Table AverageNoOfRows="1000" AverageSize="4000" Name="YFS_DOCUMENT_TEMPLATE"/>
+    <Table AverageNoOfRows="1000" AverageSize="900" Name="YFS_ENTERPRISE"/>
+    <Table AverageNoOfRows="1000" AverageSize="350" Name="YFS_ENTERPRISE_SUPPLIER_REF"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ENTITY_ADDRESS"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ENTITY_ADDRESS_H"/>
+    <Table AverageNoOfRows="500" AverageSize="296"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_EQUIPMENT" WMSTable="Y"/>
+    <Table AverageNoOfRows="5000" AverageSize="416"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_EQUIPMENT_DETAIL" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="240"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_EQUIPMENT_DEVICE" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="537"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_EQUIPMENT_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="336"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_EQUIPMENT_TYPE_DETAIL" WMSTable="Y"/>
+    <Table AverageNoOfRows="5000" AverageSize="300"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_EQUIP_TYPE_TASK_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ERROR_CAUSE_ACTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ERROR_CODE"/>
+    <Table AverageNoOfRows="5000" AverageSize="352"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ESP_TERMS" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_EVENT"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_EVENT_CONDITION"/>
+    <Table AverageNoOfRows="1000" AverageSize="447" Name="YFS_EXECUTION_EXCEPTION" AvgNoOfRowsForNonIntegratedNodes="1" WMSTable="Y"/>
+    <Table AverageNoOfRows="100000" AverageSize="5000" Name="YFS_EXPORT"/>
+    <Table AverageNoOfRows="10000" AverageSize="350" Name="YFS_FLOW"/>
+    <Table AverageNoOfRows="5000" AverageSize="422"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_FREIGHT_TERMS" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_FUTURE_INVENTORY_AVAIL"/>
+	<Table AverageNoOfRows="10000" AverageSize="2500" Name="YFS_GRAPH_UI"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_HEADER_CHARGES"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_HEADER_CHARGES_H"/>
+    <Table AverageNoOfRows="2000" AverageSize="200" Name="YFS_HOLD_TYPE"/>
+    <Table AverageNoOfRows="2000" AverageSize="150" Name="YFS_HOLD_TYPE_TRAN"/>
+    <Table AverageNoOfRows="2000" AverageSize="200" Name="YFS_HOLD_TYPE_MOD_TYPE"/>
+    <Table AverageNoOfRows="100000" AverageSize="5000" Name="YFS_IMPORT"/>
+    <Table AverageNoOfRows="10000" AverageSize="301"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_INBOUND_COMPLIANCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="200" AverageSize="368"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_INBOUND_VAS_COMPLIANCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_INBOX"/>
+    <Table AverageNoOfRows="50000" AverageSize="400" Name="YFS_INBOX_AUDIT"/>
+    <Table AverageNoOfRows="50000" AverageSize="250" Name="YFS_INBOX_REFERENCES"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_INSPECTION_DETAIL"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_INSPECTION_DETAIL_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_INSTRUCTION_DETAIL"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_INSTRUCTION_DETAIL_H"/>
+    <Table AverageNoOfRows="100000" AverageSize="150" Name="YFS_INVENTORY_ACTIVITY"/>
+	<Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_INVENTORY_ALERTS"/>
+    <Table AverageNoOfRows="100000" AverageSize="400" Name="YFS_INVENTORY_AUDIT"/>
+    <Table AverageNoOfRows="100000" AverageSize="400" Name="YFS_INVENTORY_AUDIT_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="105" Name="YFS_INVENTORY_CONSIDERATIONS"/>
+    <Table AverageNoOfRows="100000" AverageSize="400" Name="YFS_INVENTORY_DEMAND"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_INVENTORY_DEMAND_DTLS"/>
+    <Table AverageNoOfRows="1000" AverageSize="206" Name="YFS_INVENTORY_DEMAND_TYPE"/>
+    <Table AverageNoOfRows="100000" AverageSize="250" Name="YFS_INVENTORY_ITEM"/>
+    <Table AverageNoOfRows="0" AverageSize="300" Name="YFS_INVENTORY_MATCH"/>
+    <Table AverageNoOfRows="1000" AverageSize="350" Name="YFS_INVENTORY_MONITOR_RULES"/>
+    <Table AverageNoOfRows="0" AverageSize="300" Name="YFS_INVENTORY_PENDING_ADJ"/>
+    <Table AverageNoOfRows="0" AverageSize="500" Name="YFS_INVENTORY_RECEIPT"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_INVENTORY_RESERVATION"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_INVENTORY_SEGMENT"/>
+    <Table AverageNoOfRows="0" AverageSize="250" Name="YFS_INVENTORY_SHIPMENT"/>
+    <Table AverageNoOfRows="100" AverageSize="466"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_INVENTORY_STATUS" WMSTable="Y"/>
+    <Table AverageNoOfRows="30" AverageSize="276"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_INVENTORY_STATUS_TRAN" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_INVENTORY_SUPPLY"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_INVENTORY_SUPPLY_TEMP"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_INVENTORY_SUPPLY_TYPE"/>
+    <Table AverageNoOfRows="10000" AverageSize="800" Name="YFS_INVENTORY_TAG"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_INVOICE_CHARGE"/>
+    <Table AverageNoOfRows="10000" AverageSize="264" Name="YFS_INVOICE_COLLECTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="264" Name="YFS_INVOICE_COLLECTION_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_INVOKED_FLOWS"/>
+    <Table AverageNoOfRows="10000" AverageSize="600" Name="YFS_ITEM"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_ITEM_ALIAS"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_ITEM_EXCLUSION"/>
+    <Table AverageNoOfRows="1000" AverageSize="600" Name="YFS_ITEM_INSTRUCTION"/>
+    <Table AverageNoOfRows="1000" AverageSize="600" Name="YFS_ITEM_INSTRUCTION_CODE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_ITEM_OPTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_ITEM_PRICE_SET"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_ITEM_PRICE_SET_DTL"/>
+    <Table AverageNoOfRows="1000" AverageSize="350" Name="YFS_ITEM_SERVICE_ASSOC"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_ITEM_SHIP_NODE"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_ITEM_STATUS_RULES"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_ITEM_TAG"/>
+    <Table AverageNoOfRows="1000" AverageSize="450" Name="YFS_ITEM_UOM"/>
+    <Table AverageNoOfRows="100" AverageSize="400" Name="YFS_ITEM_UOM_MASTER"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_KIT_ITEM"/>
+    <Table AverageNoOfRows="500" AverageSize="743"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LABEL_FORMAT" WMSTable="Y"/>
+    <Table AverageNoOfRows="50" AverageSize="440"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LABEL_PREFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_LANGUAGE_DESCRIPTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_LINE_CHARGES"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_LINE_CHARGES_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="750" Name="YFS_LOAD"/>
+    <Table AverageNoOfRows="10000" AverageSize="281"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LOADED_CONTAINER" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_LOAD_SHIPMENT"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_LOAD_SHIPMENT_CHARGE"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_LOAD_STATUS_AUDIT"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_LOAD_STOP"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_LOCALE"/>
+    <Table AverageNoOfRows="10" AverageSize="618"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LOCATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="20" AverageSize="368"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCATION_CAPACITY" WMSTable="Y"/>
+    <Table AverageNoOfRows="50" AverageSize="554"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCATION_INVENTORY" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="312"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCATION_PREFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="20" AverageSize="498"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LOCATION_SIZE" WMSTable="Y"/>
+    <Table AverageNoOfRows="0" AverageSize="500"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCATION_STORAGE_CODE" WMSTable="Y"/>
+    <Table AverageNoOfRows="684060" AverageSize="1878"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCN_INVENTORY_AUDIT" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="444"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCN_MONITOR_ALERT" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="296"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCN_MONITOR_FILTER" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="730"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_LOCN_MONITOR_RULE" WMSTable="Y"/>
+    <Table AverageNoOfRows="650000" AverageSize="498"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LPN_DTL" WMSTable="Y"/>
+    <Table AverageNoOfRows="325000" AverageSize="604"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LPN_HDR" WMSTable="Y"/>
+    <Table AverageNoOfRows="146250" AverageSize="336"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LPN_LOCATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="16250" AverageSize="408"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_LPN_PEND_MOVE" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_MANIFEST"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_MASTER_CATALOG"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_MENU"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_MODIFICATION_ATTRIBUTE"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_MODULE_DOCUMENT_TYPE"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_MONITORING_CONSOLIDATION"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_MONITOR_ALERT"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_MONITOR_RULE"/>
+    <Table AverageNoOfRows="1000" AverageSize="1500" Name="YFS_MONITOR_TYPE"/>
+    <Table AverageNoOfRows="37220" AverageSize="762"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_MOVE_REQUEST" WMSTable="Y"/>
+    <Table AverageNoOfRows="208020" AverageSize="1136"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_MOVE_REQUEST_LINE" WMSTable="Y"/>
+    <Table AverageNoOfRows="37220" AverageSize="592"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_MOVE_REQUEST_LINE_TAG" WMSTable="Y"/>
+    <Table AverageNoOfRows="74440" AverageSize="296"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_MOVE_REQ_STATUS_AUDIT" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="300" Name="YFS_NEGOTIABLE_HDR_ATTR"/>
+    <Table AverageNoOfRows="1000" AverageSize="300" Name="YFS_NEGOTIABLE_LINE_ATTR"/>
+    <Table AverageNoOfRows="10000" AverageSize="700" Name="YFS_NEGOTIATION_HDR"/>
+    <Table AverageNoOfRows="10000" AverageSize="700" Name="YFS_NEGOTIATION_HDR_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="600" Name="YFS_NEGOTIATION_LINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="600" Name="YFS_NEGOTIATION_LINE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_NEGOTIATION_RULE"/>
+    <Table AverageNoOfRows="10" AverageSize="330" Name="YFS_NODE_DISPOSITION" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="1" AverageSize="364" Name="YFS_NODE_RECEIVING_PREF" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_NODE_TRANSFER_SCHEDULE"/>
+    <Table AverageNoOfRows="5" AverageSize="264" Name="YFS_NODE_TRAN_ATTR" WMSTable="Y" AvgNoOfRowsForNonIntegratedNodes="1"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_NOTES"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_NOTES_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_OBJECT_LOCK"/>
+    <Table AverageNoOfRows="1000" AverageSize="449"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_OPEN_CONTAINER" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_ORDER_AUDIT"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_ORDER_AUDIT_DETAIL"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_ORDER_AUDIT_DETAIL_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_ORDER_AUDIT_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_ORDER_AUDIT_LEVEL"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_ORDER_AUDIT_LEVEL_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ORDER_CHARGE"/>
+    <Table AverageNoOfRows="10000" AverageSize="600" Name="YFS_ORDER_DATE"/>
+    <Table AverageNoOfRows="10000" AverageSize="600" Name="YFS_ORDER_DATE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="1500" Name="YFS_ORDER_HEADER"/>
+    <Table AverageNoOfRows="10000" AverageSize="1500" Name="YFS_ORDER_HEADER_H"/>
+    <Table AverageNoOfRows="12000" AverageSize="210" Name="YFS_ORDER_HOLD_TYPE"/>
+    <Table AverageNoOfRows="12000" AverageSize="210" Name="YFS_ORDER_HOLD_TYPE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="629" Name="YFS_ORDER_INVOICE"/>
+    <Table AverageNoOfRows="10000" AverageSize="304" Name="YFS_ORDER_INVOICE_DETAIL"/>
+    <Table AverageNoOfRows="10000" AverageSize="304" Name="YFS_ORDER_INVOICE_DETAIL_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="629" Name="YFS_ORDER_INVOICE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_ORDER_KIT_LINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_ORDER_KIT_LINE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ORDER_KIT_LINE_SCHEDULE"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_ORDER_KIT_LINE_SCHEDULE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="1500" Name="YFS_ORDER_LINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="1500" Name="YFS_ORDER_LINE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_ORDER_LINE_OPTION"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_ORDER_LINE_OPTION_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="650" Name="YFS_ORDER_LINE_REQ_TAG"/>
+    <Table AverageNoOfRows="1000" AverageSize="650" Name="YFS_ORDER_LINE_REQ_TAG_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_ORDER_LINE_SCHEDULE"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_ORDER_LINE_SCHEDULE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_ORDER_LINE_TYPE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ORDER_MODIFICATION"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_ORDER_MODIFICATION_TYPES"/>
+    <Table AverageNoOfRows="1000" AverageSize="300" Name="YFS_ORDER_PROD_SER_ASSOC"/>
+    <Table AverageNoOfRows="1000" AverageSize="300" Name="YFS_ORDER_PROD_SER_ASSOC_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_ORDER_RELEASE"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_ORDER_RELEASE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="450" Name="YFS_ORDER_RELEASE_STATUS"/>
+    <Table AverageNoOfRows="10000" AverageSize="450" Name="YFS_ORDER_RELEASE_STATUS_H"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_ORDER_VALIDATION"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_ORGANIZATION"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_ORG_DOCUMENT"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_ORG_ENTERPRISE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_ORG_GROUP_OVERRIDE"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_ORG_PROTOCOL"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_ORG_PROTOCOL_REFERENCE"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_ORG_ROLE"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_ORG_SERVICE"/>
+    <Table AverageNoOfRows="500" AverageSize="280"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PACK_DO_NOT_MIX" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="377"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PACK_STGY_SHIP_MODE" WMSTable="Y"/>
+    <Table AverageNoOfRows="20" AverageSize="296"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PACK_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="304"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PACK_STRATEGY_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PAYMENT"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PAYMENT_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_PAYMENT_RULE"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_PAYMENT_TYPE"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_PERMISSION"/>
+    <Table AverageNoOfRows="50000" AverageSize="1000" Name="YFS_PERSON_INFO"/>
+    <Table AverageNoOfRows="50000" AverageSize="1000" Name="YFS_PERSON_INFO_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_PICK_LIST"/>
+    <Table AverageNoOfRows="10" AverageSize="440"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PICK_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE_CONDITION"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE_DEFINITION"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE_DROP_STS_COND"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE_LISTENER"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_PIPELINE_PICKUP_TRAN"/>
+    <Table AverageNoOfRows="10" AverageSize="773"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PLA_ACTIVITY_DETER" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="290"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PLA_ACTIVITY_TASK_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="364"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PLA_CONDITION_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="616"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PLA_ITEM_CONDITION" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="496"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PLA_UOM_CONDITION" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="280"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PLA_UPGRADE_UOM" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="304"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PLA_ZONE_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="478"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PLA_ZONE_SET" WMSTable="Y"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_HEADER"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_HEADER_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_LINE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_LINE_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_RECEIPT"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_PO_RECEIPT_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_PRICE_PROGRAM"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_PRICE_PROGRAM_DEFN"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_PRICE_SET"/>
+    <Table AverageNoOfRows="0" AverageSize="200" Name="YFS_PRINT"/>
+    <Table AverageNoOfRows="1000" AverageSize="256"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PRINTER_TYPE_PRNT_DOCS" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="473"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PRINT_DOCUMENT" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="471"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PRINT_DOCUMENT_TRAN_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="0" AverageSize="200" Name="YFS_PRINT_EVENT"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_PROCESS_TASK_TYPE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_PROCESS_TYPE"/>
+    <Table AverageNoOfRows="600" AverageSize="1354"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PRODUCTIVITY" WMSTable="Y"/>
+    <Table AverageNoOfRows="200" AverageSize="356"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PRODUCTIVITY_REFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="200" AverageSize="437"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PRODUCTIVITY_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="0" Name="YFS_PROTOCOL"/>
+    <Table AverageNoOfRows="1000" AverageSize="500" Name="YFS_PURGE_CRITERIA"/>
+    <Table AverageNoOfRows="20" AverageSize="400"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_PUTAWAY_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="200" AverageSize="346"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_PUTAWAY_STRATEGY_DTL" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="3000" Name="YFS_QUERY"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_QUEUE"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_QUEUE_SUBSCRIPTION"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_RECEIPT_HEADER"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_RECEIPT_HEADER_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_RECEIPT_LINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_RECEIPT_LINE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RECEIPT_TYPE"/>
+    <Table AverageNoOfRows="5000" AverageSize="250" Name="YFS_RECEIVING_DISCREPANCY"/>
+    <Table AverageNoOfRows="5000" AverageSize="250" Name="YFS_RECEIVING_DISCREPANCY_H"/>
+    <Table AverageNoOfRows="5000" AverageSize="250" Name="YFS_RECEIVING_DISCR_DTL"/>
+    <Table AverageNoOfRows="5000" AverageSize="250" Name="YFS_RECEIVING_DISCR_DTL_H"/>
+    <Table AverageNoOfRows="100" AverageSize="300" Name="YFS_RECEIVING_DISCR_REASON"/>
+    <Table AverageNoOfRows="1000" AverageSize="350" Name="YFS_RECEIVING_PREFERENCE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RECURRENCE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RECURRENCE_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RECURRENCE_LIST"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RECURRENCE_LIST_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_REFERENCE_TABLE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_REFERENCE_TABLE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_REGION"/>
+    <Table AverageNoOfRows="20000" AverageSize="250" Name="YFS_REGION_DETAIL"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_REGION_LEVEL"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_REGION_LEVEL_ASSOC"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_REGION_SCHEMA"/>
+    <Table AverageNoOfRows="100" AverageSize="200" Name="YFS_REGION_USAGE"/>
+    <Table AverageNoOfRows="100000" AverageSize="10000" Name="YFS_REPROCESS_ERROR"/>
+    <Table AverageNoOfRows="30000" AverageSize="750" Name="YFS_RESOURCE"/>
+    <Table AverageNoOfRows="30000" AverageSize="200" Name="YFS_RESOURCE_PERMISSION"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE_HDR"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE_HDR_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE_LINE"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_RESPONSE_LINE_DTL"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_RESPONSE_LINE_DTL_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_RESPONSE_LINE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="400" Name="YFS_RES_POOL"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RES_POOL_CAPCTY_CONSMPTN"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RES_POOL_CAPCTY_OVERRIDE"/>
+	<Table AverageNoOfRows="3000" AverageSize="250" Name="YFS_RES_POOL_CONSMPTN_DTLS"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_RES_POOL_DOW_CAPCTY"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RES_POOL_ITEM"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RES_POOL_REGION"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RES_POOL_STD_CAPCTY_PERD"/>
+    <Table AverageNoOfRows="50" AverageSize="364"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_RETRIEVAL_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="516"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_RETRIEVAL_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_CONTAINER"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_CONTAINER_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_CONTAINER_ITEMS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_CONTAINER_ITEMS_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="800" Name="YFS_RETURN_DISPOSITION"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_INSPECTION"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_INSPECTION_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_LINE_STATUS"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_LINE_STATUS_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_RELEASE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_RELEASE_H"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_RELEASE_LINE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_RETURN_RELEASE_LINE_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RETURN_TYPE"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_ROLE"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_ROLE_DOCUMENT"/>
+    <Table AverageNoOfRows="5000" AverageSize="1128"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ROUTING_GUIDE" WMSTable="Y"/>
+    <Table AverageNoOfRows="50000" AverageSize="443"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_ROUTING_GUIDE_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="50000" AverageSize="730"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_ROUTING_GUIDE_DETAIL" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="400" Name="YFS_RULES"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_RULESET"/>
+    <Table AverageNoOfRows="10000" AverageSize="750" Name="YFS_SAVED_SEARCH"/>
+    <Table AverageNoOfRows="1000" AverageSize="750" Name="YFS_SCAC"/>
+    <Table AverageNoOfRows="1000" AverageSize="400" Name="YFS_SCAC_AND_SERVICE"/>
+    <Table AverageNoOfRows="0" AverageSize="0" Name="YFS_SCAC_CROSS_REF"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_SCAC_EX"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_SERVER"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_SERVICE"/>
+    <Table AverageNoOfRows="1000" AverageSize="400" Name="YFS_SERVICE_RESOURCE"/>
+	<Table AverageNoOfRows="100" AverageSize="250" Name="YFS_SERVICE_SLOT"/>
+    <Table AverageNoOfRows="100" AverageSize="250" Name="YFS_SERVICE_SLOT_GROUP"/>
+    <Table AverageNoOfRows="10000" AverageSize="1250" Name="YFS_SHIPMENT"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_SHIPMENT_CONTAINER"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_SHIPMENT_CONTAINER_H"/>
+    <Table AverageNoOfRows="10" AverageSize="482"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_SHIPMENT_GROUP" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="1250" Name="YFS_SHIPMENT_H"/>
+    <Table AverageNoOfRows="100" AverageSize="921"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_SHIPMENT_SELECTOR" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="364"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_SHIPMENT_SELECT_ATTR" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="400" Name="YFS_SHIPMENT_STATUS_AUDIT"/>
+    <Table AverageNoOfRows="100000" AverageSize="1250" Name="YFS_SHIPMENT_STATUS_AUDIT_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="350"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_SHIPPING_PREFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="304"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_SHIP_CONSTRAINTS" WMSTable="Y"/>
+    <Table AverageNoOfRows="5000" AverageSize="500" Name="YFS_SHIP_NODE"/>
+    <Table AverageNoOfRows="0" AverageSize="460"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_SKU_DEDICATION" WMSTable="Y"/>
+    <Table AverageNoOfRows="10" AverageSize="599"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_SORT_STRATEGY" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="250"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_SOURCING_RULE_DTL" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="450"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_SOURCING_RULE_HDR" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_SPECIAL_SERVICES"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_SPECIAL_SERVICE_REF"/>
+    <Table AverageNoOfRows="100000" AverageSize="400" Name="YFS_STATISTICS_DETAIL"/>
+    <Table AverageNoOfRows="100000" AverageSize="200" Name="YFS_STATISTICS_HEADER"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_STATUS"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_STATUS_AUDIT"/>
+    <Table AverageNoOfRows="10000" AverageSize="350" Name="YFS_STATUS_CONDITION"/>
+    <Table AverageNoOfRows="5" AverageSize="150" Name="YFS_STATUS_INV_SELECTION"/>
+	<Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_STATUS_INVENTORY_TYPES"/>
+    <Table AverageNoOfRows="10000" AverageSize="500" Name="YFS_STATUS_MILESTONE"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_STATUS_MODIFICATION"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_STATUS_MODIFICATION_TYPE"/>
+    <Table AverageNoOfRows="100" AverageSize="250"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_STORAGE_CONSTRAINT" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="1500" Name="YFS_SUB_FLOW"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_SUPPLIER"/>
+    <Table AverageNoOfRows="342030" AverageSize="2618"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TASK" WMSTable="Y"/>
+    <Table AverageNoOfRows="2052180" AverageSize="2618"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TASK_H" WMSTable="Y"/>
+    <Table AverageNoOfRows="100000" AverageSize="250" Name="YFS_TASK_Q"/>
+    <Table AverageNoOfRows="1500" AverageSize="273"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TASK_REFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="15000" AverageSize="591"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_TASK_STATUS_AUDIT" WMSTable="Y"/>
+    <Table AverageNoOfRows="90000" AverageSize="591"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_TASK_STATUS_AUDIT_H" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="825"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TASK_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="500" AverageSize="0"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TASK_TYPE_RATE" WMSTable="Y"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_TAX_BREAKUP"/>
+    <Table AverageNoOfRows="10000" AverageSize="250" Name="YFS_TAX_BREAKUP_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="600" Name="YFS_TRANSACTION"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_TRANSACTION_DROP_STATUS"/>
+    <Table AverageNoOfRows="1000" AverageSize="264" AvgNoOfRowsForNonIntegratedNodes="1"  				Name="YFS_TRANSACTION_LOCK" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="200" Name="YFS_TRANSACTION_PICKUP_STS"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_TRANSPORT_TYPES"/>
+    <Table AverageNoOfRows="5000" AverageSize="200" Name="YFS_TRAN_FLOW"/>
+    <Table AverageNoOfRows="10" AverageSize="250"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_TRAN_LOCN_ATTRS" WMSTable="Y"/>
+    <Table AverageNoOfRows="2000" AverageSize="150" Name="YFS_TRAN_USER_EXIT"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_UOM"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_UOM_CONVERSION"/>
+    <Table AverageNoOfRows="10000" AverageSize="1000" Name="YFS_USER"/>
+    <Table AverageNoOfRows="50000" AverageSize="1000" Name="YFS_USER_ACTIVITY"/>
+    <Table AverageNoOfRows="1000" AverageSize="0" Name="YFS_USER_EXCEPTION"/>
+    <Table AverageNoOfRows="1000" AverageSize="198" Name="YFS_USER_EXIT"/>
+    <Table AverageNoOfRows="5000" AverageSize="300" Name="YFS_USER_EXIT_IMPL"/>
+    <Table AverageNoOfRows="10000" AverageSize="300" Name="YFS_USER_GROUP"/>
+    <Table AverageNoOfRows="1000" AverageSize="150" Name="YFS_USER_GROUP_LIST"/>
+    <Table AverageNoOfRows="250" AverageSize="291"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_USER_PRINTER_PREFERENCE" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="274"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_USER_TASK_TYPE" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="557" AvgNoOfRowsForNonIntegratedNodes="1" 				Name="YFS_USER_TRAN_CONSTRAINTS" WMSTable="Y"/>
+    <Table AverageNoOfRows="100" AverageSize="290"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_USER_ZONE" WMSTable="Y"/>
+    <Table AverageNoOfRows="1000" AverageSize="250" Name="YFS_VENDOR"/>
+    <Table AverageNoOfRows="150" AverageSize="883"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_WAVE" WMSTable="Y"/>
+    <Table AverageNoOfRows="30" AverageSize="746"
+        AvgNoOfRowsForNonIntegratedNodes="1"
+        Name="YFS_WAVE_SIZE_CONSTRAINT" WMSTable="Y"/>
+    <Table AverageNoOfRows="1600" AverageSize="1358" Name="YFS_WORK_ORDER"/>
+    <Table AverageNoOfRows="8000" AverageSize="273" Name="YFS_WORK_ORDER_ACTIVITY"/>
+    <Table AverageNoOfRows="48000" AverageSize="273" Name="YFS_WORK_ORDER_ACTIVITY_H"/>
+    <Table AverageNoOfRows="8000" AverageSize="250" Name="YFS_WORK_ORDER_APPT"/>
+    <Table AverageNoOfRows="48000" AverageSize="250" Name="YFS_WORK_ORDER_APPT_H"/>
+    <Table AverageNoOfRows="8000" AverageSize="151" Name="YFS_WORK_ORDER_SERVICE_LINE"/>
+    <Table AverageNoOfRows="48000" AverageSize="151" Name="YFS_WORK_ORDER_SERVICE_LINE_H"/>
+    <Table AverageNoOfRows="8000" AverageSize="151" Name="YFS_WORK_ORDER_PROD_DEL"/>
+    <Table AverageNoOfRows="48000" AverageSize="151" Name="YFS_WORK_ORDER_PROD_DEL_H"/>
+    <Table AverageNoOfRows="96000" AverageSize="432" Name="YFS_WORK_ORDER_ACTY_DTL"/>
+    <Table AverageNoOfRows="16010000" AverageSize="432" Name="YFS_WORK_ORDER_ACTY_DTL_H"/>
+    <Table AverageNoOfRows="1000" AverageSize="512" Name="YFS_WORK_ORDER_ALLOC_CONS"/>
+    <Table AverageNoOfRows="8000" AverageSize="562" Name="YFS_WORK_ORDER_COMPONENT"/>
+    <Table AverageNoOfRows="48000" AverageSize="562" Name="YFS_WORK_ORDER_COMPONENT_H"/>
+    <Table AverageNoOfRows="8000" AverageSize="592" Name="YFS_WORK_ORDER_COMP_TAG"/>
+    <Table AverageNoOfRows="48000" AverageSize="592" Name="YFS_WORK_ORDER_COMP_TAG_H"/>
+    <Table AverageNoOfRows="9600" AverageSize="1358" Name="YFS_WORK_ORDER_H"/>
+    <Table AverageNoOfRows="8000" AverageSize="246" Name="YFS_WORK_ORDER_STS_AUDIT"/>
+    <Table AverageNoOfRows="48000" AverageSize="246" Name="YFS_WORK_ORDER_STS_AUDIT_H"/>
+    <Table AverageNoOfRows="9600" AverageSize="592" Name="YFS_WORK_ORDER_TAG"/>
+    <Table AverageNoOfRows="1601000" AverageSize="592" Name="YFS_WORK_ORDER_TAG_H"/>
+    <Table AverageNoOfRows="10000" AverageSize="150" Name="YFS_XREF_CODE"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_XREF_CONFIG_DTL"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_XREF_CONFIG_HDR"/>
+    <Table AverageNoOfRows="50000" AverageSize="300" Name="YFS_XREF_MAPPING"/>
+    <Table AverageNoOfRows="10000" AverageSize="200" Name="YFS_XREF_VALUE"/>
+    <Table AverageNoOfRows="50000" AverageSize="250" Name="YFS_ZIP_CODE_LOCATION"/>
+    <Table AverageNoOfRows="10" AverageSize="568"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ZONE" WMSTable="Y"/>
+    <Table AverageNoOfRows="20" AverageSize="240"
+        AvgNoOfRowsForNonIntegratedNodes="1" Name="YFS_ZONE_ENTERPRISE" WMSTable="Y"/>
+	<Table  Name="YFS_INVENTORY_DEMAND_ADDNL" AverageSize="400" AverageNoOfRows="100000" />
+	<Table  Name="YFS_INVENTORY_NODE_CONTROL" AverageSize="250" AverageNoOfRows="10000" />
+	<Table  Name="YFS_INVENTORY_SUPPLY_ADDNL" AverageSize="400" AverageNoOfRows="10000" />
+	<Table  Name="YFS_ORDER_LINE_CAPACITY" AverageSize="400" AverageNoOfRows="1000" />
+	<Table  Name="YFS_ORDER_LINE_CAPACITY_H" AverageSize="400" AverageNoOfRows="1000" />
+	<Table  Name="YFS_ORDER_SER_PROD_ITEM" AverageSize="300" AverageNoOfRows="1000" />
+	<Table  Name="YFS_ORDER_SER_PROD_ITEM_H" AverageSize="300" AverageNoOfRows="1000" />
+</Tables>

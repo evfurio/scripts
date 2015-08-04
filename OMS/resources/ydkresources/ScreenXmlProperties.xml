@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<PanelControls>
+		<Panel isMandatory="Y">
+			<Properties>
+				<Property name="Screen_Type" desc="Type_of_the_screen" xmlAttr="type" isMandatory="Y" isReadOnly="Y"/>
+			</Properties>
+		</Panel>
+		<Includes isMandatory="Y">
+			<MenuItems>
+				<Menu name="Include" xmlElementName="Include"/>
+			</MenuItems>
+		</Includes>
+        <Include>
+			<Properties>
+				<Property name="Include_JSP_File" desc="Enter_JSP_file_url_to_include" xmlAttr="file" isMandatory="Y"/>
+			</Properties>
+		</Include>
+		<Imports isMandatory="Y">
+			<MenuItems>
+				<Menu name="Import" xmlElementName="Import"/>
+			</MenuItems>
+		</Imports>
+        <Import>
+			<Properties>
+				<Property name="Import_Class" desc="Enter_class_to_import" xmlAttr="class" isMandatory="Y"/>
+			</Properties>
+		</Import>
+		<Taglibs isMandatory="Y">
+			<MenuItems>
+				<Menu name="Taglib" xmlElementName="Taglib"/>
+			</MenuItems>
+		</Taglibs>
+        <Taglib>
+			<Properties>
+				<Property name="Prefix" desc="Enter_tablib_prefix" xmlAttr="prefix" isMandatory="Y"/>
+				<Property name="URI" desc="Enter_tablib_URI" xmlAttr="uri" isMandatory="Y"/>
+			</Properties>
+		</Taglib>
+		<ClientScripts isMandatory="Y">
+			<MenuItems>
+				<Menu name="Script" xmlElementName="Script"/>
+			</MenuItems>
+		</ClientScripts>
+        <Script>
+			<Properties>
+				<Property name="Include_JS_File" desc="Enter_JS_file_url_to_include" xmlAttr="file" isMandatory="Y"/>
+			</Properties>
+		</Script>
+        <ServerCode isMandatory="Y"> 
+            <MenuItems>
+                <Menu name="JSP" xmlElementName="JSP"/>
+            </MenuItems>
+        </ServerCode>
+        <JSP SpecialFormName="JSPEditor">
+            <Properties>
+                <Property name="JSP" desc="Enter_JSP" xmlAttr="jsp"/>
+            </Properties>
+        </JSP>
+		<Components isMandatory="Y">
+			<MenuItems>
+				<Menu name="Table" xmlElementName="Table" notValidForList="Y"/>
+				<Menu name="Switch" xmlElementName="Switch"/>
+				<Menu name="ListTable" xmlElementName="ListTable" notValidForSearch="Y"/>
+			</MenuItems>
+		</Components>
+        <Table>
+			<Properties>
+				<Property name="CSS_Class" desc="Enter_CSS_class_name" xmlAttr="class"/>
+				<Property name="CSS_Style" desc="Enter_CSS_style" xmlAttr="style"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Row" xmlElementName="Row"/>
+				<Menu name="Switch" xmlElementName="Switch"/>
+			</MenuItems>
+		</Table>
+        <Row>
+			<Properties>
+				<Property name="CSS_Class" desc="Enter_CSS_class_name" xmlAttr="class"/>
+				<Property name="CSS_Style" desc="Enter_CSS_style" xmlAttr="style"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Column" xmlElementName="Column"/>
+				<Menu name="Switch" xmlElementName="Switch"/>
+			</MenuItems>
+		</Row>
+        <Column>
+			<Properties>
+				<Property name="CSS_Class" desc="Enter_CSS_class_name" xmlAttr="class"/>
+				<Property name="CSS_Style" desc="Enter_CSS_style" xmlAttr="style"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Switch" xmlElementName="Switch"/>
+				<Menu name="Label" xmlElementName="Label"/>
+				<Menu name="Input" xmlElementName="Input"/>
+				<Menu name="HiddenInput" xmlElementName="HiddenInput"/>
+				<Menu name="DateInput" xmlElementName="DateInput"/>
+				<Menu name="Select" xmlElementName="Select"/>
+				<Menu name="Checkbox" xmlElementName="Checkbox"/>
+				<Menu name="Radio" xmlElementName="Radio"/>
+                <Menu name="Dynamic_Attribute" xmlElementName="DynamicAttr"/>
+                <Menu name="Image" xmlElementName="Image"/>
+			</MenuItems>
+		</Column>
+		<Switch>
+			<MenuItems>
+				<Menu name="Case" xmlElementName="Case"/>
+			</MenuItems>
+		</Switch>
+		<Case>
+			<Properties>
+				<Property name="Case_Statement" desc="Enter_the_case_statement_(Use_'Default'_for_no_condition)" xmlAttr="value" isMandatory="Y"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Label" xmlElementName="Label"/>
+				<Menu name="Input" xmlElementName="Input"/>
+				<Menu name="HiddenInput" xmlElementName="HiddenInput"/>
+				<Menu name="DateInput" xmlElementName="DateInput"/>
+				<Menu name="Select" xmlElementName="Select"/>
+				<Menu name="Checkbox" xmlElementName="Checkbox"/>
+				<Menu name="Radio" xmlElementName="Radio"/>
+			</MenuItems>
+		</Case>
+		<Label>
+			<Properties>
+				<Property name="Title" desc="Enter_the_resource_bundle_key_for_the_label" xmlAttr="title" isMandatory="Y"/>
+			</Properties>
+		</Label>
+		<Input>
+			<Properties>
+				<Property name="CSS_Class" desc="Enter_CSS_class_name" xmlAttr="class"/>
+				<Property name="XML_Binding" desc="Enter_XML_binding_for_getTextOptions" xmlAttr="binding" isMandatory="Y"/>
+                <Property name="XML_Target_Binding" desc="Enter_XML_target_binding_for_getTextOptions" xmlAttr="targetBinding"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Lookup" xmlElementName="Lookup"/>
+				<Menu name="Dynamic_Attribute" xmlElementName="DynamicAttr"/>
+			</MenuItems>
+		</Input>
+        <DateInput>
+            <Properties>
+                <Property name="XML_Binding" desc="Enter_XML_binding_for_getTextOptions" xmlAttr="binding" isMandatory="Y"/>
+                <Property name="XML_Target_Binding" desc="Enter_XML_target_binding_for_getTextOptions" xmlAttr="targetBinding"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Lookup" xmlElementName="Lookup"/>
+                <Menu name="Dynamic_Attribute" xmlElementName="DynamicAttr"/>
+            </MenuItems>
+        </DateInput>
+        <HiddenInput>
+            <Properties>
+                <Property name="Name" desc="Enter_name" xmlAttr="name"/>
+                <Property name="Value" desc="Enter_Value" xmlAttr="value"/>
+            </Properties>
+        </HiddenInput>
+        <Select>
+            <Properties>
+                <Property name="CSS_Class" desc="Enter_CSS_class_name" xmlAttr="class"/>
+                <Property name="XML_Binding" desc="Enter_XML_binding_for_getComboOptions" xmlAttr="binding" isMandatory="Y"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Dynamic_Attribute" xmlElementName="DynamicAttr"/>
+                <Menu name="Tag_Lib" xmlElementName="UseLib"/>
+            </MenuItems>
+        </Select>
+		<Lookup>
+			<Properties>
+				<Property name="Name" desc="Enter_lookup_name" xmlAttr="name" isMandatory="Y"/>
+				<Property name="Title" desc="Enter_lookup_title" xmlAttr="title" isMandatory="Y"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Param" xmlElementName="Param"/>
+			</MenuItems>
+		</Lookup>
+		<DynamicAttr>
+			<Properties>
+				<Property name="Name" desc="Enter_attribute_name(leave_blank_if_you_want_)" xmlAttr="name"/>
+				<Property name="Language" desc="Enter_'JS'_if_you_want_to_switch_to_JavaScript_notation" xmlAttr="language"/>
+				<Property name="Output_Delimiter" desc="Enter_output_delimiter(only_if_you_had_type_as_'Method'_and_if_you_want_this_delimiter_to_appear_around_the_method_call)" xmlAttr="outputDelim"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Param" xmlElementName="Param"/>
+			</MenuItems>
+		</DynamicAttr>
+        <Event>
+            <Properties>
+                <Property name="Name" desc="Enter_attribute_name(leave_blank_if_you_want_)" xmlAttr="name"/>
+                <Property name="Method" desc="Enter_method_name" xmlAttr="method"/>
+                <Property name="Variable" desc="Enter_variable" xmlAttr="variable"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Param" xmlElementName="Param"/>
+            </MenuItems>
+        </Event>
+        <Param SpecialFormName="ParamEditor">
+			<Properties>
+				<Property name="Type" desc="Enter_'Method'_if_this_parameter_is_another_method_call" xmlAttr="type"/>
+				<Property name="Name" desc="Enter_method_name(only_if_you_had_type_as_'Method')" xmlAttr="name"/>
+				<Property name="Language" desc="Enter_'JS'_if_you_want_to_switch_to_JavaScript_notation" xmlAttr="language"/>
+				<Property name="Output_Delimiter" desc="Enter_output_delimiter(only_if_you_had_type_as_'Method'_and_if_you_want_this_delimiter_to_appear_around_the_method_call)" xmlAttr="outputDelim"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Param" xmlElementName="Param"/>
+			</MenuItems>
+		</Param>
+		<UseLib>
+			<Properties>
+				<Property name="Id" desc="Enter_taglib_name" xmlAttr="id" isMandatory="Y"/>
+				<Property name="Name" desc="Enter_name_attribute" xmlAttr="name"/>
+				<Property name="XML_Binding" desc="Enter_XML_binding" xmlAttr="binding" isMandatory="Y"/>
+				<Property name="Value" desc="Enter_value_attribute" xmlAttr="value"/>
+                <Property name="Selected" desc="Enter_selected_attribute" xmlAttr="selected"/>
+			</Properties>
+			<MenuItems>
+				<Menu name="Param" xmlElementName="Param"/>
+			</MenuItems>
+		</UseLib>
+        <Image>
+            <Properties>
+                <Property name="Icon" desc="Enter_Icon" xmlAttr="icon"/>
+                <Property name="Title" desc="Enter_Tool_Tip_attribute" xmlAttr="title"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Event_Definition" xmlElementName="Event"/>
+            </MenuItems>
+        </Image>
+        <Radio>
+            <Properties>
+                <Property name="Title" desc="Enter_Radio_Label" xmlAttr="title"/>
+                <Property name="Checked" desc="Enter_Y_if_Radio_is_to_be_selected" xmlAttr="checked"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Binding" xmlElementName="Binding"/>
+            </MenuItems>
+        </Radio>
+        <Checkbox>
+            <Properties>
+                <Property name="Title" desc="Enter_Radio_Label" xmlAttr="title"/>
+                <Property name="Checked_Value" desc="Enter_checked_value" xmlAttr="checked"/>
+                <Property name="Unchecked_Value" desc="Enter_unchecked_value" xmlAttr="unchecked"/>
+            </Properties>
+            <MenuItems>
+                <Menu name="Binding" xmlElementName="Binding"/>
+            </MenuItems>
+        </Checkbox>
+        <Binding>
+            <MenuItems>
+                <Menu name="Param" xmlElementName="Param"/>
+            </MenuItems>
+        </Binding>
+</PanelControls>

@@ -1,0 +1,11 @@
+"Name","Server","Database","Port"
+"DEV_Catalog","DL1GSDDB01.TESTECOM.PVT\commerce","Gamestop_productcatalog",
+"QA_Catalog","DL1GSQDB10SQL1.testecom.pvt\INST1","Gamestop_productcatalog",
+"QA_Profiles","DL1GSQDB10SQL2.testecom.pvt\INST2","Gamestop_profiles",
+"QA_OrderStore","DL1GSQDB10SQL3.testecom.pvt\INST3","Gamestop_OrderStore",
+"QA_DigitalWallet","DL1SCQDB01SQL25.testecom.pvt\INST25","DigitalWallet",
+"QA_ConsolidatedProfile","GV1HQQDB50sql01.testgs.pvt\inst01","Profile",
+"QA_HOPS","GV1HQQDB50SQL03.testgs.pvt\INST03","StoreInformation",
+,,,
+"CERT_Catalog","DL1SCLDB01SQL1.TESTECOM.PVT\Inst1","Gamestop_productcatalog",
+"PROD_Catalog","dl1gspdb06sql03.gamestop.com\inst03","Gamestop_productcatalog",

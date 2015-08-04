@@ -1,0 +1,84 @@
+--ecom user blanks to nulls for merge package
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_user_id]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_first_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_last_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_email_address]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_addresses]))) = 0 --20772
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_tel_number]))) = 0 --53238
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_tel_extension]))) = 0 --12630
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_account_status]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([dt_date_created]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([b_direct_mail_opt_out]))) = 0 
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([b_email_optin]))) = 0 
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([b_mobile_optin]))) = 0 
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_mobile_number]))) = 0 --35264
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_default_bill_address]))) = 0 --1644
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_default_ship_address]))) = 0 --5095
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_display_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_gender]))) = 0 --33614
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_birth_month]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_birth_day]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([i_customer_id]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_powerup_card_number]))) = 0 --22
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([u_account_id]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_UserObject] WHERE LEN(RTRIM(LTRIM([HomeStore]))) = 0
+
+--ecom address blanks to nulls for merge package
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_address_id]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([i_address_type]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_address_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_first_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_last_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_address_line1]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_address_line2]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_region_code]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_postal_code]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_country_code]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_country_name]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_tel_number]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_tel_extension]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([dt_date_created]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([u_store_number]))) = 0 --2914
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([b_ups_validated]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Ecom_Addresses] WHERE LEN(RTRIM(LTRIM([IsDefault]))) = 0
+
+--genesis user blanks to nulls for merge package
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([GenesisCustomerID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([CustomerID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([FirstName]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([MiddleName]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([LastName]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([DOB]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([EmailAddress]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([GenderID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([DateUpdated]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([DateCreated]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([MobilePhone]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([HomePhone]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([WorkPhone]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([PrimaryPhone]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([EmailOptOut]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([u_user_id]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([CustomerGUID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([EmailInvalid]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([Suspect]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([ProfileStatusID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([HomeStoreNumber]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([OpenIdClaimedIdentifier]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Customer] WHERE LEN(RTRIM(LTRIM([MembershipID]))) = 0
+
+--genesis address blanks to nulls for merge package
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([AddressID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([AddressLine1]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([AddressLine2]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([City]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([StateorProvince]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([Zip]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([Country]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([CustomerID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([AddressTypeID]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([FirstName]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([LastName]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([IsDefault]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([StateAbbr]))) = 0
+SELECT COUNT (*) FROM [Profile].[Stage].[Genesis_Address] WHERE LEN(RTRIM(LTRIM([CityName]))) = 0

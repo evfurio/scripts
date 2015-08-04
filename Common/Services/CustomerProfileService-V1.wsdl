@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:msgTypes="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://services.gamestop.com/marketing/customerprofile/customerprofileservice-v1" xmlns:common="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:faults="http://schemas.gamestop.com/shared/commonschemas/faults/v1.0" xmlns:customerprofile="http://schemas.gamestop.com/marketing/customerprofile/v1.0" xmlns:customerprofile2="http://schemas.gamestop.com/marketing/customerprofile/v2.0" targetNamespace="http://services.gamestop.com/marketing/customerprofile/customerprofileservice-v1">
+	<wsdl:import namespace="http://schemas.gamestop.com/shared/commonschemas/faults/v1.0" location="../../../Shared/CommonSchemas/Faults-V1.xsd"/>
+	<wsdl:import namespace="http://schemas.gamestop.com/shared/commonschemas/v1.0" location="../../../Shared/CommonSchemas/MessageHeader-V2.xsd"/>
+	<wsdl:types>
+		<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns:msgTypes="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0" xmlns:points ="http://schemas.gamestop.com/marketing/loyaltylifecycle/v1.0" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0" elementFormDefault="qualified">
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation="../Profile-V1.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation="../UpdateableProfile-V1.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v2.0" schemaLocation="../Membership-V2.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation="../GameLibraryItem-V1.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation="../Reservation-V1.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation="../LockerItem-V1.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/shared/commonschemas/v1.0" schemaLocation="../../../Shared/CommonSchemas/Phone-V2.xsd"/>
+			<xsi:import namespace="http://schemas.gamestop.com/marketing/loyaltylifecycle/v1.0" schemaLocation="../../LoyaltyLifeCycle/LoyaltyPointsInformation-V1.xsd"/>
+			<xs:complexType name="Profiles">
+				<xs:sequence>
+					<xs:element name="Profile" type="msgTypes:ProfileExtended" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xsi:complexType name="ProfileExtended">
+				<xsi:complexContent>
+					<xsi:extension base="customerprofile:Profile">
+						<xsi:sequence>
+							<xsi:element name="ExtendedProfiles" type="msgTypes:ExtendedProfileResponse" nillable="true" minOccurs="0" maxOccurs="1"/>
+						</xsi:sequence>
+					</xsi:extension>
+				</xsi:complexContent>
+			</xsi:complexType>
+			<xsi:element name="SearchProfileResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Profiles" type="msgTypes:Profiles" minOccurs="0" maxOccurs="1"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="SearchProfileByEmailRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="EmailAddress" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:string">
+									<xsi:pattern value="[A-Za-z0-9_]+([-+.'][A-Za-z0-9_]+)*@[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*\.[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*"/>
+								</xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+						<xsi:element name="ExtendedProfileRequests" type="msgTypes:ExtendedProfileRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="SearchProfileByOpenIDRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="OpenIdClaimedIdentifier" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:string">
+									<xsi:maxLength value="255"/>
+								</xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+						<xsi:element name="ExtendedProfileRequests" type="msgTypes:ExtendedProfileRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="GetExtendedProfilesByOpenIDRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="OpenIdClaimedIdentifier" type="xs:string" minOccurs="1" maxOccurs="1"/>
+						<xsi:element name="ExtendedProfileRequests" type="msgTypes:ExtendedProfileRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="GetExtendedProfilesByOpenIDResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="ExtendedProfiles" type="msgTypes:ExtendedProfileResponse" nillable="true" minOccurs="0" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:complexType name="ExtendedProfileRequest">
+				<xsi:sequence>
+					<xsi:element name="MembershipsRequest" type="msgTypes:MembershipsRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="GameLibraryRequest" type="msgTypes:GameLibraryRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="ReservationsRequest" type="msgTypes:ReservationsRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="DigitalLockerRequest" type="msgTypes:DigitalLockerRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="PointsInformationRequest" type="msgTypes:PointsInformationRequest" nillable="true" minOccurs="0" maxOccurs="1"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="MembershipsRequest"/>
+			<xsi:complexType name="GameLibraryRequest"/>
+			<xsi:complexType name="ReservationsRequest"/>
+			<xsi:complexType name="DigitalLockerRequest"/>
+			<xsi:complexType name="PointsInformationRequest"/>
+			<xsi:complexType name="ExtendedProfileResponse">
+				<xsi:sequence>
+					<xsi:element name="Memberships" type="msgTypes:Memberships" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="GameLibrary" type="msgTypes:GameLibrary" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="Reservations" type="msgTypes:Reservations" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="DigitalLocker" type="msgTypes:DigitalLocker" nillable="true" minOccurs="0" maxOccurs="1"/>
+					<xsi:element name="LoyaltyPointsInformation" type="points:LoyaltyPointsInformation" nillable="true" minOccurs="0" maxOccurs="1"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="Memberships">
+				<xsi:sequence>
+					<xsi:element ref="customerprofile2:Membership" maxOccurs="unbounded"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:element name="CreateProfileRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element ref="customerprofile:Profile" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreateProfileResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="ProfileId" type="xs:int" minOccurs="0"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:complexType name="GameLibrary">
+				<xsi:sequence>
+					<xsi:element ref="customerprofile:GameLibraryItem" maxOccurs="unbounded"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="Reservations">
+				<xsi:sequence>
+					<xsi:element ref="customerprofile:Reservation" maxOccurs="unbounded"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="DigitalLocker">
+				<xsi:sequence>
+					<xsi:element ref="customerprofile:LockerItem" maxOccurs="unbounded"/>
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:element name="UpdateProfileRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element ref="customerprofile:UpdateProfile" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdateProfileResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xs:element minOccurs="0" name="MembershipId" nillable="true" type="xs:int"/>
+						<xs:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreateAddressRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Address" type="customerprofile:Address" minOccurs="1" maxOccurs="1"/>
+						<xsi:element name="OpenIdClaimedIdentifier" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:string">
+									<xsi:maxLength value="255"/>
+								</xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreateAddressResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="AddressId" type="xs:int"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreatePhoneRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="OpenIdClaimedIdentifier" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:string">
+									<xsi:maxLength value="255"/>
+								</xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+						<xsi:element name="Phone" type="common:Phone" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreatePhoneResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PhoneId" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:int">                  
+                </xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreatePreferredStoreRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PreferredStore" type="customerprofile:PreferredStore" minOccurs="1" maxOccurs="1"/>
+						<xsi:element name="OpenIdClaimedIdentifier" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:string">
+									<xsi:maxLength value="255"/>
+								</xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="CreatePreferredStoreResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PreferredStoreId" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:int">                  
+                </xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeleteAddressRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="AddressID" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:int">                  
+                </xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeleteAddressResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="AddressId" type="xs:int" minOccurs="0"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeletePhoneRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PhoneID" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:int">                  
+                </xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeletePhoneResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeletePreferredStoreRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PreferredStoreID" minOccurs="1" maxOccurs="1">
+							<xsi:simpleType>
+								<xsi:restriction base="xs:int">                  
+                </xsi:restriction>
+							</xsi:simpleType>
+						</xsi:element>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="DeletePreferredStoreResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xs:element minOccurs="0" name="NewDefaultPreferredHomeStoreId" nillable="true" type="xs:int"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdateAddressRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Address" type="customerprofile:Address" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdateAddressResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="AddressId" type="xs:int" minOccurs="0"/>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdatePhoneRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Phone" type="common:Phone" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdatePhoneResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdatePreferredStoreRequest">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="PreferredStore" type="customerprofile:PreferredStore" minOccurs="1" maxOccurs="1"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name="UpdatePreferredStoreResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element name="Status" type="xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name = "GetVersionRequest">
+				<xsi:complexType>
+					<xsi:sequence/>
+				</xsi:complexType>
+			</xsi:element>
+			<xsi:element name = "GetVersionResponse">
+				<xsi:complexType>
+					<xsi:sequence>
+						<xsi:element minOccurs = "0" name = "GetVersionResult" nillable = "false" type = "xs:string"/>
+					</xsi:sequence>
+				</xsi:complexType>
+			</xsi:element>
+		</xsi:schema>
+	</wsdl:types>
+	<wsdl:message name = "GetVersionRequest">
+		<wsdl:part element = "msgTypes:GetVersionRequest" name = "GetVersionRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "GetVersionResponse">
+		<wsdl:part element = "msgTypes:GetVersionResponse" name = "GetVersionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SearchProfileByOpenIDRequest">
+		<wsdl:part name="SearchProfileByOpenIDRequest" element="msgTypes:SearchProfileByOpenIDRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SearchProfileByOpenIDResponse">
+		<wsdl:part name="SearchProfileByOpenIDResponse" element="msgTypes:SearchProfileResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SearchProfileByEmailRequest">
+		<wsdl:part name="SearchProfileByEmailRequest" element="msgTypes:SearchProfileByEmailRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SearchProfileByEmailResponse">
+		<wsdl:part name="SearchProfileByEmailResponse" element="msgTypes:SearchProfileResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetExtendedProfilesByOpenIDRequest">
+		<wsdl:part name="GetExtendedProfilesByOpenIDRequest" element="msgTypes:GetExtendedProfilesByOpenIDRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetExtendedProfilesByOpenIDResponse">
+		<wsdl:part name="GetExtendedProfilesByOpenIDResponse" element="msgTypes:GetExtendedProfilesByOpenIDResponse"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateProfileRequest">
+		<wsdl:part name="UpdateProfileRequest" element="msgTypes:UpdateProfileRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateProfileResponse">
+		<wsdl:part name="UpdateProfileResponse" element="msgTypes:UpdateProfileResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CreateProfileRequest">
+		<wsdl:part name="CreateProfileRequest" element="msgTypes:CreateProfileRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CreateProfileResponse">
+		<wsdl:part name="CreateProfileResponse" element="msgTypes:CreateProfileResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CreateAddressRequest">
+		<wsdl:part name="CreateAddressRequest" element="msgTypes:CreateAddressRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CreateAddressResponse">
+		<wsdl:part name="CreateAddressResponse" element="msgTypes:CreateAddressResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CreatePhoneRequest">
+		<wsdl:part name="CreatePhoneRequest" element="msgTypes:CreatePhoneRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CreatePhoneResponse">
+		<wsdl:part name="CreatePhoneResponse" element="msgTypes:CreatePhoneResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CreatePreferredStoreRequest">
+		<wsdl:part name="CreatePreferredStoreRequest" element="msgTypes:CreatePreferredStoreRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CreatePreferredStoreResponse">
+		<wsdl:part name="CreatePreferredStoreResponse" element="msgTypes:CreatePreferredStoreResponse"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateAddressRequest">
+		<wsdl:part name="UpdateAddressRequest" element="msgTypes:UpdateAddressRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateAddressResponse">
+		<wsdl:part name="UpdateAddressResponse" element="msgTypes:UpdateAddressResponse"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePhoneRequest">
+		<wsdl:part name="UpdatePhoneRequest" element="msgTypes:UpdatePhoneRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePhoneResponse">
+		<wsdl:part name="UpdatePhoneResponse" element="msgTypes:UpdatePhoneResponse"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePreferredStoreRequest">
+		<wsdl:part name="UpdatePreferredStoreRequest" element="msgTypes:UpdatePreferredStoreRequest"/>
+	</wsdl:message>
+	<wsdl:message name="UpdatePreferredStoreResponse">
+		<wsdl:part name="UpdatePreferredStoreResponse" element="msgTypes:UpdatePreferredStoreResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeleteAddressRequest">
+		<wsdl:part name="DeleteAddressRequest" element="msgTypes:DeleteAddressRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeleteAddressResponse">
+		<wsdl:part name="DeleteAddressResponse" element="msgTypes:DeleteAddressResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeletePhoneRequest">
+		<wsdl:part name="DeletePhoneRequest" element="msgTypes:DeletePhoneRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeletePhoneResponse">
+		<wsdl:part name="DeletePhoneResponse" element="msgTypes:DeletePhoneResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeletePreferredStoreRequest">
+		<wsdl:part name="DeletePreferredStoreRequest" element="msgTypes:DeletePreferredStoreRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeletePreferredStoreResponse">
+		<wsdl:part name="DeletePreferredStoreResponse" element="msgTypes:DeletePreferredStoreResponse"/>
+	</wsdl:message>
+	<wsdl:message name="MessageHeaders">
+		<wsdl:part name="MessageHeaders" element="common:MessageHeaders"/>
+	</wsdl:message>
+	<wsdl:message name="ExpectedFaultDetail">
+		<wsdl:part name="ExpectedFaultDetail" element="faults:ExpectedFaultDetail"/>
+	</wsdl:message>
+	<wsdl:message name="ReceiverFaultDetail">
+		<wsdl:part name="ReceiverFaultDetail" element="faults:ReceiverFaultDetail"/>
+	</wsdl:message>
+	<wsdl:message name="SenderFaultDetail">
+		<wsdl:part name="SenderFaultDetail" element="faults:SenderFaultDetail"/>
+	</wsdl:message>
+	<wsdl:portType name="CustomerProfileService_V1">
+	<wsdl:operation name = "GetVersion">
+			<wsdl:input message = "tns:GetVersionRequest"/>
+			<wsdl:output message = "tns:GetVersionResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SearchProfileByOpenID">
+			<wsdl:input name="SearchProfileByOpenIDRequest" message="tns:SearchProfileByOpenIDRequest"/>
+			<wsdl:output name="SearchProfileByOpenIDResponse" message="tns:SearchProfileByOpenIDResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="SearchProfileByEmail">
+			<wsdl:input name="SearchProfileByEmailRequest" message="tns:SearchProfileByEmailRequest"/>
+			<wsdl:output name="SearchProfileByEmailResponse" message="tns:SearchProfileByEmailResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetExtendedProfilesByOpenID">
+			<wsdl:input name="GetExtendedProfilesByOpenIDRequest" message="tns:GetExtendedProfilesByOpenIDRequest"/>
+			<wsdl:output name="GetExtendedProfilesByOpenIDResponse" message="tns:GetExtendedProfilesByOpenIDResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateProfile">
+			<wsdl:input name="UpdateProfileRequest" message="tns:UpdateProfileRequest"/>
+			<wsdl:output name="UpdateProfileResponse" message="tns:UpdateProfileResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="CreateProfile">
+			<wsdl:input name="CreateProfileRequest" message="tns:CreateProfileRequest"/>
+			<wsdl:output name="CreateProfileResponse" message="tns:CreateProfileResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="CreateAddress">
+			<wsdl:input name="CreateAddressRequest" message="tns:CreateAddressRequest"/>
+			<wsdl:output name="CreateAddressResponse" message="tns:CreateAddressResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteAddress">
+			<wsdl:input name="DeleteAddressRequest" message="tns:DeleteAddressRequest"/>
+			<wsdl:output name="DeleteAddressResponse" message="tns:DeleteAddressResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateAddress">
+			<wsdl:input name="UpdateAddressRequest" message="tns:UpdateAddressRequest"/>
+			<wsdl:output name="UpdateAddressResponse" message="tns:UpdateAddressResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="CreatePhone">
+			<wsdl:input name="CreatePhoneRequest" message="tns:CreatePhoneRequest"/>
+			<wsdl:output name="CreatePhoneResponse" message="tns:CreatePhoneResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeletePhone">
+			<wsdl:input name="DeletePhoneRequest" message="tns:DeletePhoneRequest"/>
+			<wsdl:output name="DeletePhoneResponse" message="tns:DeletePhoneResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePhone">
+			<wsdl:input name="UpdatePhoneRequest" message="tns:UpdatePhoneRequest"/>
+			<wsdl:output name="UpdatePhoneResponse" message="tns:UpdatePhoneResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="CreatePreferredStore">
+			<wsdl:input name="CreatePreferredStoreRequest" message="tns:CreatePreferredStoreRequest"/>
+			<wsdl:output name="CreatePreferredStoreResponse" message="tns:CreatePreferredStoreResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeletePreferredStore">
+			<wsdl:input name="DeletePreferredStoreRequest" message="tns:DeletePreferredStoreRequest"/>
+			<wsdl:output name="DeletePreferredStoreResponse" message="tns:DeletePreferredStoreResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePreferredStore">
+			<wsdl:input name="UpdatePreferredStoreRequest" message="tns:UpdatePreferredStoreRequest"/>
+			<wsdl:output name="UpdatePreferredStoreResponse" message="tns:UpdatePreferredStoreResponse"/>
+			<wsdl:fault name="ExpectedFaultDetail" message="tns:ExpectedFaultDetail"/>
+			<wsdl:fault name="ReceiverFaultDetail" message="tns:ReceiverFaultDetail"/>
+			<wsdl:fault name="SenderFaultDetail" message="tns:SenderFaultDetail"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CustomerProfileService_V1Binding" type="tns:CustomerProfileService_V1">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name = "GetVersion">
+			<soap:operation soapAction = "/Marketing/CustomerProfile/CustomerProfileService/GetVersion" style = "document"/>
+			<wsdl:input>
+				<soap:body use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "GetVersionResponse" use = "literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CreateProfile">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/CreateProfile" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="CreateProfileRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="CreateProfileResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="SearchProfileByOpenID">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/SearchProfileByOpenID" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="SearchProfileByOpenIDRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="SearchProfileByOpenIDResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="SearchProfileByEmail">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/SearchProfileByEmail" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="SearchProfileByEmailRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="SearchProfileByEmailResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetExtendedProfilesByOpenID">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/GetExtendedProfilesByOpenID" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="GetExtendedProfilesByOpenIDRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="GetExtendedProfilesByOpenIDResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateProfile">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/UpdateProfile" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="UpdateProfileRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="UpdateProfileResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="CreateAddress">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/CreateAddress" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="CreateAddressRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="CreateAddressResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteAddress">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/DeleteAddress" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="DeleteAddressRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="DeleteAddressResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateAddress">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/UpdateAddress" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="UpdateAddressRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="UpdateAddressResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="CreatePhone">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/CreatePhone" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="CreatePhoneRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="CreatePhoneResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DeletePhone">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/DeletePhone" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="DeletePhoneRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="DeletePhoneResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePhone">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/UpdatePhone" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="UpdatePhoneRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="UpdatePhoneResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="CreatePreferredStore">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/CreatePreferredStore" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="CreatePreferredStoreRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="CreatePreferredStoreResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DeletePreferredStore">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/DeletePreferredStore" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="DeletePreferredStoreRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="DeletePreferredStoreResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdatePreferredStore">
+			<soap:operation soapAction="/Marketing/CustomerProfile/CustomerProfileService/UpdatePreferredStore" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:MessageHeaders" part="MessageHeaders" use="literal"/>
+				<soap:body parts="UpdatePreferredStoreRequest" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="UpdatePreferredStoreResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExpectedFaultDetail">
+				<soap:fault name="ExpectedFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="ReceiverFaultDetail">
+				<soap:fault name="ReceiverFaultDetail" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="SenderFaultDetail">
+				<soap:fault name="SenderFaultDetail" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CustomerProfileService-V1">
+		<wsdl:port name="CustomerProfileService_V1" binding="tns:CustomerProfileService_V1Binding">
+			<soap:address location="http://localhost:8106/Marketing/CustomerProfile/CustomerProfileServiceV1"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

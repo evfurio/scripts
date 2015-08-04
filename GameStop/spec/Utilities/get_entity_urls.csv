@@ -1,0 +1,3 @@
+"id","SqlQuery","Databases","DB_ENV","Endpoints","SVC_ENV","Property","PROP_URL"
+"GETURL_QA","get_single_product.sql","databases.csv","QA_Catalog","endpoints.csv","QA_V1","properties.csv","QA_GS"
+"GETURL_CERT","Get_1000_products.sql","databases.csv","CERT_Catalog","endpoints.csv","CERT_GS","properties.csv","CERT_GS"

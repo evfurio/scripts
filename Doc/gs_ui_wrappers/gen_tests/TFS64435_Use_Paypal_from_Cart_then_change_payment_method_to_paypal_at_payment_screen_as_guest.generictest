@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenericTest name="TFS64435_Use_Paypal_from_Cart_then_change_payment_method_to_paypal_at_payment_screen_as_guest" storage="TFS64435_Use_Paypal_from_Cart_then_change_payment_method_to_paypal_at_payment_screen_as_guest.generictest" id="64123660-f7c5-11e3-a995-ecf4bb032d48" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+	<Command filename="%QAAUTOMATION_TOOLS%\QAAutomation\bin\d-Con.bat" arguments="%QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\guest_checkout_spec.rb --browser chrome --csv %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\GS\checkout_dataset.csv --range TFS64435 --or " workingDirectory="%QAAUTOMATION_TOOLS%\QAAutomation\bin">
+		<EnvironmentVariables>
+			<EnvironmentVariable name="qaautomation_tools" value="C:\dev\QAAutomationCurrent" />
+			<EnvironmentVariable name="path" value="%QAAUTOMATION_TOOLS%\QAAutomation\bin;C:Program Files (x86)\Sikuli X\libs;C:\Program Files (x86)\Java\jre6\bin" />
+		</EnvironmentVariables>
+	</Command>
+<SummaryXmlFile path="%TestOutputDirectory%\&lt;Enter summary file name here&gt;" />
+</GenericTest>

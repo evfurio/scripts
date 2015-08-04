@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenericTest name="CI02_Should_validate_CI_as_guest_user" storage="CI02_Should_validate_CI_as_guest_user.generictest" id="9b7ca520-f01a-11e3-b671-183da246ebbc" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+	<Command filename="%QAAUTOMATION_TOOLS%\QAAutomation\bin\d-Con.bat" arguments="%QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\guest_checkout_spec.rb --browser chrome --csv %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\GS\checkout_dataset.csv --range CI02 --or " workingDirectory="%QAAUTOMATION_TOOLS%\QAAutomation\bin">
+		<EnvironmentVariables>
+			<EnvironmentVariable name="qaautomation_tools" value="C:\dev\QAAutomationCurrent" />
+			<EnvironmentVariable name="path" value="%QAAUTOMATION_TOOLS%\QAAutomation\bin;C:Program Files (x86)\Sikuli X\libs;C:\Program Files (x86)\Java\jre6\bin" />
+		</EnvironmentVariables>
+	</Command>
+<SummaryXmlFile path="%TestOutputDirectory%\&lt;Enter summary file name here&gt;" />
+</GenericTest>

@@ -1,0 +1,148 @@
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<Application Title="Yantra IDE">
+    <Menu MenuDescription="Applications" MenuKey="Applications" Active="Y">
+        <SubMenu>
+            <Menu MenuDescription="Tools" MenuKey="Tools" Active="Y">
+                 <SubMenu>
+                    <Menu MenuKey="Development" MenuDescription="Development" Active="Y">
+						 <SubMenu>
+		                    <Menu MenuKey="PortletExplorer" MenuDescription="Portlet_Generator" ResourceKey="PortletExplorer" Active="Y" DisplayMode="Docked"/>
+						 </SubMenu>
+					</Menu>
+                 </SubMenu>
+                 <SubMenu>
+                    <Menu MenuKey="Deployment" MenuDescription="Deployment" Active="Y">
+						 <SubMenu>
+							<Menu MenuKey="ConfigurationDeployment" MenuDescription="Configuration_Deployment" ResourceKey="CfgLogon" Active="Y" DisplayMode="Dialog"/>
+							<Menu MenuKey="LoadReport" MenuDescription="Import_Results" ResourceKey="ReportLogon" Active="Y" DisplayMode="Dialog"/>
+						 </SubMenu>
+ 					</Menu>
+                 </SubMenu>
+            </Menu>
+         </SubMenu>
+    </Menu>
+    <FormDefs>
+        <Form Name="PortletExplorer" ClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletInputExplorer" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletInputExplorerBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Load_Saved_Searches" Name="btnLoadSavedSearches" ID="btnLoadSavedSearches" Icon="com/yantra/ycp/ui/icons/search.gif"/>
+                <Action Description="Open" Name="btnCreateNew" ID="btnCreateNew" Icon="com/yantra/ycp/ui/icons/modify.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="SavedSearchPortlet" ClassName="com.yantra.tools.ydk.portlet.ui.YDKSavedSearchPortlet" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKSavedSearchPortletBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Generate_Portlet" Name="btnGenerate" ID="btnGenerate" Icon="com/yantra/ycp/ui/icons/generate.gif"/>
+                <Action Description="Test_Api" Name="btnTestApi" ID="btnTestApi" Icon="com/yantra/ycp/ui/icons/api.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="GenericDataView" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMInputDialog">
+        </Form>
+        <!-- generic XML editor. this form is not used anywhere. this is just to show all possible actions -->
+        <Form Name="XMLEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save_XML" Name="btnSaveDom" ID="btnSaveDom" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Unselect" Name="btnUnSelect" ID="btnUnSelect" Icon="com/yantra/ycp/ui/icons/dropstatus.gif"/>
+                <Action Description="Select" Name="btnSelect" ID="btnSelect" Icon="com/yantra/ycp/ui/icons/pickupstatus.gif"/>
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="DOMInputDialog" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMInputDialog">
+        </Form>
+        <Form Name="ApiInputEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="ApiTemplateEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="PortletDetail" ClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletDetail" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletDetailBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Generate_Portlet" Name="btnGenerate" ID="btnGenerate" Icon="com/yantra/ycp/ui/icons/checkall.gif"/>
+                <Action Description="Test_Api" Name="btnTestApi" ID="btnTestApi" Icon="com/yantra/ycp/ui/icons/api.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="MetaDataEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="ConfigDataEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="SynchronizationExplorer" ClassName="com.yantra.tools.ydk.config.ui.YDKSynchronizationExplorer" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKSynchronizationExplorerBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Compare" Name="btnCompare" ID="btnCompare" Icon="com/yantra/ycp/ui/icons/role.gif"/>
+                <Action Description="Preferences" Name="btnViewTransform" ID="btnViewTransform" Icon="com/yantra/ycp/ui/icons/properties.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="SynchronizationAnalysis" ClassName="com.yantra.tools.ydk.config.ui.YDKSynchronizationAnalysisResults" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKSynchronizationAnalysisResultsBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Deploy" Name="btnSynchronize" ID="btnSynchronize" Icon="com/yantra/ycp/ui/icons/arrowright.gif"/>
+                <Action Description="Export_Results" Name="btnExport" ID="btnExport" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Generate_Report" Name="btnReport" ID="btnReport" Icon="com/yantra/ycp/ui/icons/codetype.gif"/>
+                <Action Description="Details" Name="btnDetails" ID="btnDetails" Icon="com/yantra/ycp/ui/icons/zoomin.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="CfgRecordDetail" ClassName="com.yantra.tools.ydk.config.ui.YDKRecordDetails" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKRecordDetailsBehavior"/>
+        <Form Name="CfgLogon" ClassName="com.yantra.tools.ydk.config.ui.YDKConfigLogon" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKConfigLogonBehavior">
+        </Form>
+        <Form Name="ReportLogon" ClassName="com.yantra.tools.ydk.config.ui.YDKReportLogon" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKReportLogonBehavior">
+        </Form>
+        <Form Name="ConfigPreferencesXMLEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKConfigManageDBXmlBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="New_Database_Definition" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+           </Actions>
+        </Form>
+        <Form Name="ConfigTableListXMLEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKConfigTableListXmlBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="New_Table" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Set_Table_Name" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+           </Actions>
+        </Form>
+        <Form Name="ConfigTransformationsXMLEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKConfigTransformationsXMLBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="New_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+           </Actions>
+        </Form>
+        <Form Name="ConfigTransformationsContainer" ClassName="com.yantra.tools.ydk.config.ui.YDKTransformationView" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKTransformationViewBehavior">
+        </Form>
+        <Form Name="ConfigStatusForm" ClassName="com.yantra.tools.ydk.config.ui.YDKStatusForm" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKStatusFormBehavior">
+        </Form>
+        <Form Name="ConfigManageDBs" ClassName="com.yantra.tools.ydk.config.ui.YDKManageDBs" BehaviorClassName="com.yantra.tools.ydk.config.ui.YDKManageDBsBehavior">
+        </Form>
+    </FormDefs>
+</Application>

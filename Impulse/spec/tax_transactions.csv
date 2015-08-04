@@ -1,0 +1,12 @@
+"Scenario","Transaction Type","SKU1","SKU2","SKU3","Prod1","Prod2","Prod3","Discount","Tender1","Tender2","Tender3","FirstName","LastName","BillingStreet","BillingCity","BillingState","BillingZip","Ship To County","Price/ea1","Cost/ea1","Price/ea2","Cost/ea2","Price/ea3","Cost/ea3"
+"Sale - PayPal - 1 Product - No Discount - LA","Sale",520005,,,"ESD-IMP-W2301",,,"None","PayPal",,,"Aubrey","Brown","P.O. Box 140","Barksdale AFB","LA",71110,"Bossier","$59.99 ","$47.99 ",,,,
+"Sale - Discover - 1 Product - 10% Off - AK","Sale",520007,,,"ESD-IMP-W473",,,"10% Off","Discover",,,"Terry","Monroe","609 Main Street","Wasilla","AK",99654,"Matanuska-Susitna","$99.99 ","$69.99 ",,,,
+"Sale - Gift Card - 2 Products - $10 Off - IA","Sale",520008,520009,,"ESD-IMP-W2254","ESD-IMP-W924",,"$10 Off","Gift Card",,,"Teddy","Kline","41 Willis Ave","Perry","IA",50220,"Dallas","$29.99 ","$20.99 ","$39.99 ","$27.99 ",,
+"Sale - Loyalty - 1 Product - No Discount - MO","Sale",520013,,,"ESD-IMP-W2254",,,"None","Loyalty",,,"Ida","Trelane","2 Main Street","Troy","MO",63379,"Lincoln","$39.99 ","$27.99 ",,,,
+"Sale - Visa - 2 Products - 10% Off - TX","Sale",520010,520012,,"ESD-SDE-W007",,,"10% Off","Visa",,,"Carol","Murrow","390 Bonham","San Antonio","TX",78205,"Bexar","$19.95 ","$13.97 ","$29.99 ","$20.99 ",,
+"Sale - AmEx - 1 Product - No Discount - IL","Sale",520014,,,"ESD-IMP-W924",,,"None","American Express",,,"Sherri","North","15077 60th Street","Alton","IL",62002,"Madison","$49.99 ","$34.99 ",,,,
+"Sale - Loyalty - 1 Product - 10% Off - ND","Sale",520005,,,"ESD-IMP-W2301",,,"10% Off","Loyalty",,,"Bobby","Gooden","77 S. Billings","Antler","ND",58711,"Bottineau","$59.99 ","$47.99 ",,,,
+"Sale - Gift Card - 2 Products - $10 Off - LA","Sale",520005,520009,,"ESD-IMP-W2301","ESD-IMP-W924",,"$10 Off","Gift Card",,,"Mike","White","P.O. Box 140","Barksdale AFB","LA",71110,"Bossier","$59.99 ","$47.99 ","$39.99 ","$27.99 ",,
+"Sale - PayPal - 1 Product - No Discount - AI","Sale",520008,,,"ESD-IMP-W2254",,,"None","PayPal",,,"Missy","Nelson","2 Rte 6","Choccolocco","AL",36524,"Bottineau","$29.99 ","$20.99 ",,,,
+"Sale - Loyalty - 1 Product - $10 Off - TX","Sale",520012,,,"ESD-SDE-W007",,,"$10 Off","Loyalty",,,"John","Wood","12552 N. Bishop Ave","San Antonio","TX",78208,"Bexar","$29.99 ","$20.99 ",,,,
+"Sale - Visa - 3 Products - 10% Off - IL","Sale",520010,520013,520008,"ESD-SDE-W007","ESD-IMP-W2254","ESD-IMP-W924","10% Off","Visa",,,"Johnny","Newberry","605 Main Street S","Peoria","IL",61602,"Peoria","$19.95 ","$13.97 ","$39.99 ","$27.99 ","$29.99 ","$20.99 "

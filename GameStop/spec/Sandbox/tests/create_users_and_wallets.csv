@@ -1,0 +1,5 @@
+ID,SqlQuery,Databases,DB_ENV,Endpoints,SVC_ENV,Property,PROP_URL,Brand,ClientChannel,Locale,CCType,cc_number,CreditCard,CVV,cc_exp_month,cc_exp_year
+TFSTEST,get_single_product.sql,databases.csv,QA_Catalog,endpoints.csv,QA_V1,,,GS,GS_US,en-US,Visa,Generate,Generate,171,09,2016
+TFS50001,,,,,QA_V1,,,GS,GS_US,en-US,MASTERCARD,Generate,Generate,282,10,2017
+TFS50002,,,,,QA_V1,,,GS,GS_US,en-US,DISCOVER,Generate,Generate,393,11,2018
+TFS50003,,,,,QA_V1,,,GS,GS_US,en-US,AMEX,Generate,Generate,404,12,2019

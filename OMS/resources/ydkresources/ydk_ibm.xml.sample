@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<!DOCTYPE portlet-app-def PUBLIC "-//IBM//DTD Portlet Application 1.1//EN"
+                                 "portlet_1.1.dtd">
+<portlet-app-def>
+    <portlet-app uid="YantraPortal">
+        <portlet-app-name>Yantra Portal</portlet-app-name>
+        <portlet href="WEB-INF/web.xml#YantraGenericPortlet" id="$portlet_name$_$systime$">
+            <portlet-name>$portlet_name$</portlet-name>
+            <cache>
+                <expires>0</expires>
+                <shared>no</shared>
+            </cache>
+            <allows>
+                <maximized/>
+                <minimized/>
+            </allows>
+            <supports>
+                <markup name="html">
+                    <view/>
+                </markup>
+            </supports>
+        </portlet>
+    </portlet-app>
+    <concrete-portlet-app uid="$portlet_name$_$systime$">
+        <portlet-app-name>Yantra Portal</portlet-app-name>
+        <concrete-portlet href="#$portlet_name$_$systime$">
+            <portlet-name>$portlet_name$</portlet-name>
+            <default-locale>en</default-locale>
+	    <language locale="en">
+		<title>$portlet_name$</title>
+		<title-short></title-short>
+		<description></description>
+		<keywords></keywords>
+	    </language>
+            <config-param>
+                   <param-name>JspUrl</param-name>
+                   <param-value>$portlet_name$.jsp</param-value>
+            </config-param>
+        </concrete-portlet>
+    </concrete-portlet-app>
+</portlet-app-def>

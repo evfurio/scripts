@@ -1,0 +1,32 @@
+Problem - I know what the TFS build id is... how do I use this to get the project/build?
+
+Solution use this call:
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/builds/
+	examples:
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/builds/?number="Prod/Rel_20130228_20130228.11"
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/builds/?number=%22Prod/Rel_20130228_20130227.10%22
+
+why:
+	gives me the web url to the build that was being tested.
+
+What project am I testing?
+What's the build number in Team City?
+What's the TFS build number?
+What's the change set web url?
+
+http://confluence.jetbrains.com/display/TW/REST+API+Plugin
+
+Get Projects
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/projects/
+
+Get Builds
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/builds/
+
+Get the Build Types
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/buildTypes/
+
+State 
+	http://cibuilds.gamestop.com:8080/httpAuth/app/rest/cctray/projects.xml
+
+Last Successful Build Number 
+<your TeamCity server>/app/rest/buildTypes/id:<internal ID of build configuration>/builds/status:SUCCESS/number

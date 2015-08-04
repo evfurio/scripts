@@ -1,0 +1,33 @@
+SELECT TOP 10 
+	 u.u_first_name
+   , u.u_last_name
+   , u.u_email_address 
+   , u.u_addresses
+   , u.u_tel_number
+   , u.u_tel_extension
+   , u.dt_date_created
+   , u.u_default_bill_address
+   , u.u_default_ship_address
+   , u.u_display_name
+   , u.u_gender
+   , u.u_birth_month
+   , u.u_birth_day
+   , u.u_powerup_card_number
+   , u.u_account_id
+   , a.i_address_type
+   , a.u_first_name
+   , a.u_last_name
+   , a.u_description
+   , a.u_address_line1
+   , a.u_address_line2
+   , a.u_city
+   , a.u_region_code
+   , a.u_postal_code
+   , a.u_country_code
+   , a.u_country_name
+   , a.u_tel_number
+   , a.u_tel_extension
+   , a.u_store_number
+FROM Gamestop_profiles.dbo.UserObject u
+	JOIN Gamestop_profiles.dbo.Addresses a
+		ON SUBSTRING(u.u_addresses, 3, 43) = a.u_address_id

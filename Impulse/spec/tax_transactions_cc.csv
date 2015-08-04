@@ -1,0 +1,5 @@
+"Scenario","Transaction Type","SKU1","SKU2","SKU3","Prod1","Prod2","Prod3","Discount","Tender1","Tender2","Tender3","FirstName","LastName","BillingStreet","BillingCity","BillingState","BillingZip","Ship To County","Price/ea1","Cost/ea1","Price/ea2","Cost/ea2","Price/ea3","Cost/ea3"
+"Sale - Discover - 1 Product - 10% Off - AK","Sale",520007,,,"ESD-IMP-W473",,,"10% Off","Discover",,,"Terry","Monroe","609 Main Street","Wasilla","AK",99654,"Matanuska-Susitna","$99.99 ","$69.99 ",,,,
+"Sale - Visa - 2 Products - 10% Off - TX","Sale",520010,520012,,"ESD-SDE-W007",,,"10% Off","Visa",,,"Carol","Murrow","390 Bonham","San Antonio","TX",78205,"Bexar","$19.95 ","$13.97 ","$29.99 ","$20.99 ",,
+"Sale - AmEx - 1 Product - No Discount - IL","Sale",520014,,,"ESD-IMP-W924",,,"None","American Express",,,"Sherri","North","15077 60th Street","Alton","IL",62002,"Madison","$49.99 ","$34.99 ",,,,
+"Sale - Visa - 3 Products - 10% Off - IL","Sale",520010,520013,520008,"ESD-SDE-W007","ESD-IMP-W2254","ESD-IMP-W924","$10 Off","Visa",,,"Johnny","Newberry","605 Main Street S","Peoria","IL",61602,"Peoria","$19.95 ","$13.97 ","$39.99 ","$27.99 ","$29.99 ","$20.99 "

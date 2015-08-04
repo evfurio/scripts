@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<Task Class="XMLMigrator" Description="Yantra 5.0 Install" When="First">
+<TaskInfo Completed="N">
+	<EntityList>
+	<Entity Class="YFS_Resource" CommitCount="0" Completed="N" XMLFile="YFS_RESOURCE_CONSOLE_ENTITY.xml" TruncateTable="N" ResetEntityAttributes="Y" AbortOnError="N" />
+	<Entity Class="YFS_Resource_Permission" CommitCount="0" Completed="N" XMLFile="YFS_RESOURCE_PERMISSION_CONSOLE_ENTITY.xml" TruncateTable="N" ResetEntityAttributes="Y" AbortOnError="N" />
+	</EntityList>
+</TaskInfo>
+</Task>

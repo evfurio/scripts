@@ -1,0 +1,5 @@
+"Server","Env_Prefix","PUR_Account","SVS_Account","SVS_PIN","Order_Wide_Coupon","Order_Wide_Coupon_Amount","Single_Product_Coupon","Single_Product_Coupon_Amount","ProductID"
+"QA1","qa1.","3876223442336","6364911003999900109","0991","OMKG-FKSA-GIDR ",91.00%,"VHLF-QHGX-BKVN","$5.00","ESD-IMP-W2020"
+"Dev1","dev1.","3876223442336","6364911003999900109","0991","EYWI-MTYN-WEUP ",91.00%,,,"ESD-IMP-W2020"
+"Dev2","dev2.","3876223442336","6364911003999900109","0991","KHHO-JUUN-DEOP ",91.00%,,,"ESD-IMP-W2020"
+"Prod",,,,,,,,,"ESD-IMP-W2020"

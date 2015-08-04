@@ -1,0 +1,15 @@
+users/users_and_cards.csv
+GameStop/spec/UI/GS/.~lock.checkout_dataset.csv#
+GameInformer/spec/.idea/workspace.xml
+Common/dataset/configuration.db
+Common/dataset/configuration.db-journal
+users/pur_users_and_cards.csv
+Common/dataset/test_checkout
+Common/dataset/test_checkout-journal
+GameStop/spec/Utilities/phantomjsdriver.log
+tutorials/advanced/monitoring_sample.db
+tutorials/advanced/phantomjsdriver.log
+Doc/gs_svcs_wrappers/ps_scripts/phantomjsdriver.log
+Doc/gs_ui_wrappers/ps_scripts/phantomjsdriver.log
+GameStop/spec/Sandbox/remote_test.ps1
+Doc/report_html/resources/automation_logo.png

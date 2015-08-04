@@ -1,0 +1,15 @@
+<%/* Copyright � 2005, Yantra Corporation. All rights reserved. */%>
+<%@ include file="portletutils.jsp"%>
+<%
+	setRequest(request);
+	String uid = getUserId();
+	String pid = "YantraPortal";
+	%INVOKE_API%
+%>
+<script language="JavaScript">
+   function openYantra(url) {
+      var win = window.open(url,"Portal2Yantra","height=690,width=1015,left=0,top=0,status=yes,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes");
+      win.focus();
+   }
+</script>
+%PORTLET_BODY%

@@ -1,0 +1,4 @@
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<Group Name="Custom Tables">
+	<Table Name="MYCUSTOMTABLE"/>
+</Group>

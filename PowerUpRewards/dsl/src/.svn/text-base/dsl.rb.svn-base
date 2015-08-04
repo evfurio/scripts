@@ -1,0 +1,5 @@
+qaautomation_dir = ENV['QAAUTOMATION_FILES']
+require "#{qaautomation_dir}/dsl/PowerUpRewards/src/power_up_rewards_requires"
+
+# apply any patches found in the patch directory
+install_patches( ["PowerUpRewards", "CommonBrowserUtilities", "CommonComponent"] )

@@ -1,0 +1,39 @@
+<parameters>
+	<configuration>
+		<emailfrom>QAalerter@gsmail.babgsetc.pvt &lt;qaalerter@gsmail.babgsetc.pvt&gt;</emailfrom>
+		<emailto>GameStop.comQA &lt;GameStop.comQA@gamestop.com&gt;</emailto>
+		<sourceurl></sourceurl>
+		<outputfolder>C:\Users\Public\Documents\BuildInfoFiles\</outputfolder>
+		<downloadfileextension></downloadfileextension>
+		<comparisonfileextension></comparisonfileextension>
+	</configuration>
+
+	<commands>
+		<testsuite>"Plan 513 - Carpet Bomb Nightly Run"</testsuite>
+		<!-- Nightly Runs - Carpet Bomb -->
+		<commandtorun>"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\TCM.exe" run /create /title:"Carpet Bomb Nightly Run" /include /planid:513 /suiteid:17234 /configid:122 /settingsname:"d-Con Automation Run" /testenvironment:"QA Automation VM Lab" /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom /teamproject:FrontEndScrum</commandtorun>
+	</commands>
+
+</parameters>
+
+<!-- 
+EXAMPLE TCM COMMANDS: http://msdn.microsoft.com/en-us/library/dd465192.aspx
+
+List Test Plans in Team Project:
+	tcm plans /list /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom  /teamproject:FrontEndScrum
+
+List Suites in Test Plan:  
+	tcm suites /list /planid:513 /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom  /teamproject:FrontEndScrum
+
+List Configurations:
+	tcm configs /list /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom /teamproject:FrontEndScrum
+	
+List Test Environments:
+	tcm testenvironments /list /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom  /teamproject:FrontEndScrum
+	
+Run a Test Suite - IMPORTANT, If you want to make sure tests are run even if they have presviously run and passed make sure to use the "/include" option:
+		tcm run /create /title:"Orders Solution CI Smoke Suite" /include /planid:152 /suiteid:2490 /configid:13 /settingsname:"d-Con Automation Run" /testenvironment:"Physical Lab Laptop Environment" /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom /teamproject:FrontEndScrum
+		
+		Fully qualified and embedded in commandtorun:
+			"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\TCM.exe" run /create /title:"QA.Gamestop.com Build Info Change Sanity Suite" /include /planid:152 /suiteid:2490 /configid:13 /settingsname:"d-Con Automation Run" /testenvironment:"Physical Lab Laptop Environment" /collection:http://gv1gsptfs01.babgsetc.pvt:8080/tfs/ecom /teamproject:FrontEndScrum
+-->

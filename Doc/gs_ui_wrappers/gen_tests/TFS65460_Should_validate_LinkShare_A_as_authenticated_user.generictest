@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenericTest name="TFS65460_Should_validate_LinkShare_A_as_authenticated_user" storage="TFS65460_Should_validate_LinkShare_A_as_authenticated_user.generictest" id="63d46a10-f7c5-11e3-a995-ecf4bb032d48" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+	<Command filename="%QAAUTOMATION_TOOLS%\QAAutomation\bin\d-Con.bat" arguments="%QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_spec.rb --browser chrome --csv %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\GS\checkout_dataset.csv --range TFS65460 --login gsui_20140606_140738_108@qagsecomprod.oib.com --password T3sting1 --or " workingDirectory="%QAAUTOMATION_TOOLS%\QAAutomation\bin">
+		<EnvironmentVariables>
+			<EnvironmentVariable name="qaautomation_tools" value="C:\dev\QAAutomationCurrent" />
+			<EnvironmentVariable name="path" value="%QAAUTOMATION_TOOLS%\QAAutomation\bin;C:Program Files (x86)\Sikuli X\libs;C:\Program Files (x86)\Java\jre6\bin" />
+		</EnvironmentVariables>
+	</Command>
+<SummaryXmlFile path="%TestOutputDirectory%\&lt;Enter summary file name here&gt;" />
+</GenericTest>

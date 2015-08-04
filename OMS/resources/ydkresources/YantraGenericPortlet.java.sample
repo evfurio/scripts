@@ -1,0 +1,31 @@
+/* Copyright � 2005, Yantra Corporation. All rights reserved. */
+/** change this package to appropriate one, copy this file to that location, and compile it 
+package com.yourcompany.yantra.portlets;
+
+import org.apache.jetspeed.portlet.*;
+import org.apache.jetspeed.portlets.*;
+import java.io.*;
+
+/** This class is used by all portlets generated using Yantra portlet generator tool.
+ * When portlets are generated, portlet configuration XML captures the appropriate
+ * JSP name. This servlet is used by all portlets as the starting point.
+ */
+public class YantraGenericPortlet extends PortletAdapter {
+    
+    private static final String JSP_URL = "JspUrl";
+    
+    public void init(PortletConfig portletConfig) throws UnavailableException {
+        super.init( portletConfig );
+    }
+    
+    public void service( PortletRequest request, PortletResponse response) throws PortletException, IOException {
+        // get JSP Url to render
+        String jspUrl = request.getPortletSettings().getAttribute(JSP_URL);
+
+        // jspUrl must be set for rendering
+        if (jspUrl != null && jspUrl.trim().length() > 0)
+            // invoke the JSP
+            getPortletConfig().getContext().include(jspUrl, request, response);
+    }
+
+}

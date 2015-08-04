@@ -1,0 +1,2 @@
+"id"	"users"	"machines"	"hours"	"start_date"	"end_date"	"num_results"	"sql_query"	"html_template"
+"480_nightly"	"s_tfstest"	"dl1gsqweb03,dl1gsqweb04,dl1gsqweb05'"	-15			20	"lab_top_failures.sql"	"test.html"

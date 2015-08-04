@@ -1,0 +1,5 @@
+Server,Env_Prefix,PUR_Account,SVS_Account,SVS_PIN,Order_Wide_Coupon,Order_Wide_Coupon_Amount,Single_Product_Coupon,Single_Product_Coupon_Amount,ProductID,First_Name,Last_Name,Password,Account_Email,No_Fraud_Account_Email,Paypal_Primary_Email,Paypal_Secondary_Email
+QA1,qa1.,3.88E+12,6.01E+18,2295,OMKG-FKSA-GIDR ,91.00%,VHLF-QHGX-BKVN,$5.00 ,ESD-IMP-W2020,Otto,Matin,Manh0le1,ottomatin@gspcauto.fav.cc,ottomatinNOFRAUD12345@gspcauto.fav.cc,ottomatin@gspcauto.fav.cc,ottoma_1354114039_per@gspcauto.fav.cc
+Dev1,dev1.,3.88E+12,6.36E+18,991,EYWI-MTYN-WEUP ,91.00%,,,ESD-IMP-W2020,,,,,,,
+Dev2,dev2.,3.88E+12,6.36E+18,991,KHHO-JUUN-DEOP ,91.00%,,,ESD-IMP-W2020,,,,,,,
+Prod,,,,,,,,,ESD-IMP-W2020,,,,,,,

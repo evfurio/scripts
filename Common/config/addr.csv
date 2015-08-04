@@ -1,0 +1,55 @@
+p_Address,p_Address2,p_City,p_State,p_Zip,p_Tax,p_StateCode,p_CountryCode
+2600 Memorial Pkwy NW,Suite 300,Huntsville,Alabama,35810,1.24,AL,US
+321 West 5th Avenue,,Anchorage,Alaska,99501,1.14,AK,US
+545 E McDowell,,Phoenix,Arizona,85007,1.05,AZ,US
+1401 Phyllis St,,Bentonville,Arkansas,72712,1.05,AR,US
+777 Story Rd,Apt 2,San Jose,California,95122,1.2,CA,US
+505 East Colfax Avenue,,Denver,Colorado,80203,1.35,CO,US
+98 Weston St,,Hartford,Connecticut,16120,1.29,CT,US
+263 Walmart Dr,,Camden,Delaware,19934,0.95,DE,US
+6 Independence Ave SW,,Washington,District of Columbia,20004,1.24,DC,US
+5440 Washington St,,Tampa,Florida,33606,0,FL,US
+30 Marietta St,5th Floor,Atlanta,Georgia,30303,0.9,GA,US
+888 Kapahulu Ave,,Honolulu,Hawaii,96816,1.2,HI,US
+1185 Vista Ave,,Boise,Idaho,83705,0.9,ID,US
+1183 Ogden Ave,,Naperville,Illinois,60563,0.94,IL,US
+1602 North State Street,,Greenfield,Indiana,46140,1.05,IN,US
+411 Central Avenue,,Hampton,Iowa,50441,0.9,IA,US
+1011 Westloop Place,,Manhattan,Kansas,66502,1.28,KS,US
+302 Philadelphia,,Covington,Kentucky,41011,0.9,KY,US
+5224 Florida Blvd,,Baton Rouge,Louisiana,70806,1.35,LA,US
+128 Center Street,,Auburn,Maine,64710,0.75,ME,US
+6385 Crain Highway,,LaPlata,Maryland,20646,0.9,MD,US
+329 Washington St,,Boston,Massachusetts,32108,0.94,MA,US
+1000 Mack Ave,,Detroit,Michigan,48207,0.9,MI,US
+1100 University Ave,,Minneapolis,Minnesota,55413,1.17,MN,US
+2520 Gallatin St,,Jackson,Mississippi,39204,1.05,MS,US
+1919 S Jefferson,,St. Louis,Missouri,63104,1.32,MO,US
+150 Van Buren St,,Anaconda,Montana,59711,0,MT,US
+1601 Q Street,,Aurora,Nebraska,68818,0.97,NE,US
+301 Fremont,,Las Vegas,Nevada,89101,1.21,NV,US
+117 Loudon Rd,,Concord,New Hampshire,23301,0,NH,US
+741 Hamburg Tpke,Apt 1-A,Wayne,New Jersey,94101,0.77,NJ,US
+300 Lomas Blvd NE,,Albuquerque,New Mexico,87102,1.26,NM,US
+200 Hamilton Ave,,White Plains,New York,10601,1.01,NY,US
+703 W Peace St,,Raleigh,North Carolina,27605,1.12,NC,US
+905 Main Ave,,Fargo,North Dakota,58103,0.97,ND,US
+578 E Market St,,Akron,Ohio,44304,1.31,OH,US
+920 W 6th St,,Stillwater,Oklahoma,74074,0,OK,US
+28 NE Oak St,77662,Madras,Oregon,97741,0.9,OR,US
+116 Brooklyn St,,Carbondale,Pennsylvania,18472,1.05,PA,US
+876 Bald Hill Rd,,Warwick,Rhode Island,22886,1.05,RI,US
+18128 Heritage Hwy,,Denmark,South Carolina,29042,0.9,SC,US
+3200 S Minnesota Ave,,Sioux Falls,South Dakota,57105,1.39,SD,US
+1201 Broadway,,Nashville,Tennessee,37203,1.03,TN,US
+5615 High Point Dr,,Irving,Texas,75038,0.9,TX,US
+575 E University Pkwy,,Orem,Utah,84097,0.75,UT,US
+282 Berlin Mall Rd,,Berlin,Vermont,25602,1.21,VT,US
+937 W Broad St,,Richmond,Virginia,23220,0.9,VA,US
+500 B Valley Mall Pkwy,,East Wenatchee,Washington,98802,0.82,WA,US
+486 Emily Dr,,Clarksburg,West Virginia,26301,0.75,WV,US
+640 State Street,,Madison,Wisconsin,53703,0.71,WI,US
+4007 CY Avenue,,Casper,Wyoming,82604,0,WY,US
+202 Hilton Road,,Tumon,Guam,96913,0.6,GU,US
+Ave Isla Verdes,,San Juan,Puerto Rico,913,1.05,PR,US
+P.O. Box 123456,Return To Sender,Irving ,Texas,76038,0.9,TX,US

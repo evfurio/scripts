@@ -1,0 +1,150 @@
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<Application title="Yantra IDE">
+    <Menu MenuDescription="Applications"   MenuKey="Applications" Active="Y">
+        <SubMenu>
+            <Menu MenuDescription="Tools" MenuKey="Tools" Active="Y">
+                 <SubMenu>
+                    <Menu MenuKey="PortletExplorer" MenuDescription="Portlet_Generator" ResourceKey="PortletExplorer" Active="Y" DisplayMode="Docked"/>
+                    <Menu MenuKey="ScreenXMLEditor" MenuDescription="Screen_XML_Editor" Active="Y">
+                        <SubMenu>
+                            <Menu MenuKey="AppXmlExplorerPanel" MenuDescription="App_XML_Editor" ResourceKey="AppXmlExplorerPanel" Active="Y" DisplayMode="Docked"/>
+                            <Menu MenuKey="NewScreenXml" MenuDescription="New" Active="Y">
+                                <SubMenu>
+                                    <Menu MenuKey="NewSearchXml" MenuDescription="New_Search_XML" ResourceKey="NewSearchXml" Active="Y"/>
+                                    <Menu MenuKey="NewListXml" MenuDescription="New_List_XML" ResourceKey="NewListXml" Active="Y"/>
+                                    <Menu MenuKey="NewDetailXml" MenuDescription="New_Detail_XML" ResourceKey="NewDetailXml" Active="Y"/>
+                                </SubMenu>
+                            </Menu>
+                            <Menu MenuKey="OpenScreenXml" MenuDescription="Open_Screen_XML" ResourceKey="OpenScreenXml" Active="Y"/>
+                        </SubMenu>
+                    </Menu>
+                 </SubMenu>
+            </Menu>
+         </SubMenu>
+    </Menu>
+    <FormDefs>
+        <Form Name="PortletExplorer" ClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletInputExplorer" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletInputExplorerBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Load_Saved_Searches" Name="btnLoadSavedSearches" ID="btnLoadSavedSearches" Icon="com/yantra/ycp/ui/icons/search.gif"/>
+                <Action Description="Open" Name="btnCreateNew" ID="btnCreateNew" Icon="com/yantra/ycp/ui/icons/modify.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="SavedSearchPortlet" ClassName="com.yantra.tools.ydk.portlet.ui.YDKSavedSearchPortlet" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKSavedSearchPortletBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Generate_Portlet" Name="btnGenerate" ID="btnGenerate" Icon="com/yantra/ycp/ui/icons/checkall.gif"/>
+                <Action Description="Test_Api" Name="btnTestApi" ID="btnTestApi" Icon="com/yantra/ycp/ui/icons/api.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="GenericDataView" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMInputDialog">
+        </Form>
+        <!-- generic XML editor. this form is not used anywhere. this is just to show all possible actions -->
+        <Form Name="XMLEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save_XML" Name="btnSaveDom" ID="btnSaveDom" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Unselect" Name="btnUnSelect" ID="btnUnSelect" Icon="com/yantra/ycp/ui/icons/dropstatus.gif"/>
+                <Action Description="Select" Name="btnSelect" ID="btnSelect" Icon="com/yantra/ycp/ui/icons/pickupstatus.gif"/>
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="DOMInputDialog" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMInputDialog">
+        </Form>
+        <Form Name="ApiInputEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="ApiTemplateEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="PortletDetail" ClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletDetail" BehaviorClassName="com.yantra.tools.ydk.portlet.ui.YDKPortletDetailBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Generate_Portlet" Name="btnGenerate" ID="btnGenerate" Icon="com/yantra/ycp/ui/icons/checkall.gif"/>
+                <Action Description="Test_Api" Name="btnTestApi" ID="btnTestApi" Icon="com/yantra/ycp/ui/icons/api.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="MetaDataEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="ConfigDataEditor" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+                <Action Description="Load_XML" Name="btnPasteDom" ID="btnPasteDom" Icon="com/yantra/ycp/ui/icons/loadxmlstring.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="AppXmlExplorerPanel" ClassName="com.yantra.ycp.sharedui.domeditor.YCPDOMEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKAppXmlExplorerBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Load_File" Name="btnLoad" ID="btnLoad" Icon="com/yantra/ycp/ui/icons/flow.gif"/>
+                <Action Description="Save_XML" Name="btnSaveDom" ID="btnSaveDom" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="New_XML" Name="btnNewDom" ID="btnNewDom" Icon="com/yantra/ycp/ui/icons/new.gif"/>
+                <Action Description="Delete" Name="btnDelete" ID="btnDelete" Icon="com/yantra/ycp/ui/icons/delete.gif"/>
+                <Action Description="Set_Attribute_Value" Name="btnEditNode" ID="btnEditNode" Icon="com/yantra/ycp/ui/icons/modifystatus.gif"/>
+                <Action Description="New_Attribute" Name="btnNewAttribute" ID="btnNewAttribute" Icon="com/yantra/ycp/ui/icons/addstatus.gif"/>
+                <Action Description="New_Child_Element" Name="btnNewElement" ID="btnNewElement" Icon="com/yantra/ycp/ui/icons/newcategory.gif"/>
+            </Actions>
+        </Form>
+        <Form Name="NewSearchXml" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save" Name="btnSave" ID="btnSave" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Launch_Editor" Name="btnLaunchEditor" ID="btnLaunchEditor" Icon="com/yantra/ycp/ui/icons/load.gif"/>
+            </Actions>
+            <Parameters openMode="N" screenType="Search"/>
+        </Form>
+        <Form Name="NewListXml" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save" Name="btnSave" ID="btnSave" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Launch_Editor" Name="btnLaunchEditor" ID="btnLaunchEditor" Icon="com/yantra/ycp/ui/icons/load.gif"/>
+            </Actions>
+            <Parameters openMode="N" screenType="List"/>
+        </Form>
+        <Form Name="NewDetailXml" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save" Name="btnSave" ID="btnSave" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Launch_Editor" Name="btnLaunchEditor" ID="btnLaunchEditor" Icon="com/yantra/ycp/ui/icons/load.gif"/>
+            </Actions>
+            <Parameters openMode="N" screenType="Detail"/>
+        </Form>
+        <Form Name="OpenScreenXml" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKScreenXMLEditorBehavior">
+            <Actions Name="Actions" ID="Actions">
+                <Action Description="Save" Name="btnSave" ID="btnSave" Icon="com/yantra/ycp/ui/icons/save.gif"/>
+                <Action Description="Launch_Editor" Name="btnLaunchEditor" ID="btnLaunchEditor" Icon="com/yantra/ycp/ui/icons/load.gif"/>
+            </Actions>
+            <Parameters openMode="Y"/>
+        </Form>
+        <Form Name="ScreenXmlSimplePropEditor" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKSimplePropertyEditor">
+        </Form>
+        <Form Name="ScreenXmlEmptyPropEditor" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKEmptyPropertyEditor">
+        </Form>
+        <Form Name="ParamEditor" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKParamEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKParamEditorBehavior">
+        </Form>
+        <Form Name="JSPEditor" ClassName="com.yantra.tools.ydk.screenxml.ui.YDKJSPEditor" BehaviorClassName="com.yantra.tools.ydk.screenxml.ui.YDKJSPEditorBehavior">
+        </Form>
+    </FormDefs>
+</Application>

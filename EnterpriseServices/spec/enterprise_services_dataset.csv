@@ -1,0 +1,4 @@
+"ID","TestDescription","login","password","Endpoints","SVC_ENV","properties","prop_url","Project","ScriptName","ZipCode","StoreId","StoreNumber"
+"TC_CW1","should verify allspark portal home",,,"endpoints.csv","QA_V1","properties.csv","https://globaldlcadministrationqa.testecom.pvt/DLCPlus/","EnterpriseServices","%QAAUTOMATION_SCRIPTS%\EnterpriseServices\spec\all_spark_spec.rb  --browser chrome",,,
+"TC_CP","Do stuff",,,"endpoints.csv","QA_V1",,,,,,,
+"TFS86995","GetStoreInformation and GetStoresByZipCode",,,"endpoints.csv","QA_V1",,,"EnterpriseServices","%QAAUTOMATION_SCRIPTS%\EnterpriseServices\spec\store_information_spec.rb",76051,13317,6528

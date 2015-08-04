@@ -1,0 +1,38 @@
+Overview of General Tips
+We develop scripts to test an application.  We are not developing applications.
+
+If you have questions ask. Don't spend a week spinning your wheels on a question that someone could answer for you in a few seconds. Please do some research and if it's not popping out at you immediately, please ask.  The d-Con framework is built here so some things you just can't Google and get an answer.
+ 
+
+Here are some general Rubyist and QA Automation guidelines to learn and follow.
+
+- Use 2 spaces not tabs
+
+- doNotUseVarsCamelCase, use_readable_varialbes
+
+- donotmakemethodslikethis, do_it_like_this
+
+- do_not_name_a_test_case_something_that_takes_two_hundred_characters_just_so_its_readable_by_file_name.rb, 
+
+- test_checkout.rb is easy to read.  Rely on your test case descriptions for the test name information. If you're following the standards most of your tests will contain only a few if not just one functional method to run multiple tests. 
+
+- Use [] to create an Array
+    a = ["1", "2", "3"]
+
+- Use {} to create a Hash
+    h = {1,2,3}
+
+- Don't rescue Exception. Ever. Defeats the point of an automated test if you're swallowing up exceptions that should fail a test.
+
+- Don't call exit inside of a library method
+- Avoid $ global variables unless you can full explain the reason for using it.
+
+
+Advanced guidelines:
+- Use parens to disambiguate, otherwise avoid them.  This isn't Java.
+- Enumerables are your friends.  Google them and learn them.
+    http://ruby-doc.org/core-1.9.3/Enumerable.html
+
+- Do not return different types. Ruby is "strongly typed" in the sense that typing errors are prevented at runtime and do little implicit type conversions.  However, Ruby does not make use of static type checking becuase the compiler does not check nor enforce type constraint rules. 
+http://en.wikipedia.org/wiki/Strong_typing
+

@@ -1,0 +1,12 @@
+<request>
+   <quantity>1</quantity>
+   <attributes>
+      <attribute>
+         <name>TEMPLATE</name>
+         <action>Use_or</action>
+         <values>
+            <value></value>
+         </values>
+      </attribute>
+   </attributes>
+</request>

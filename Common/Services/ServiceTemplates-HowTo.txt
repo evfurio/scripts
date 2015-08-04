@@ -1,0 +1,80 @@
+In order to support a soap service operation, a template is required for that
+soap operation.  The steps are as follows:
+
+1. If no operations were currently supported for a service, a new file is needed. This
+    file needs to be placed in the QAAutomation Scripts dsl Services directory..  For example:
+    * cd $env:QAAUTOMATION_SCRIPTS"/GameStop/dsl/src/Services"
+    * create a new file at this location named "templates_<service_name>.rb"
+2. In this file add a ruby module.  Do this by adding "module <Service_class_name>RequestTemplates".
+    NOTE: the module MUST be named based off of the service's class name.  For example:
+        * CartService is created for a service pertaining to cart.
+        * CartServiceRequestTemplates MUST be the name of the module that will contain the templates.
+3. For each soap operation you need supported, add the request template as a constant string.
+    An example is show below, where OPERATION is the name of the soap operation.  This must be
+    "all-caps", surrounded by "eos", and non-indented.  In between the first and last line is the
+    operation request template soap envelope.  This can be taken directly from soapUI with WS-A turned on for WSA
+    support, but it must contain <wsa:Action soap:mustUnderstand="1"> and <wsa:To soap:MustUnderstand="1">.
+    soapUI does not display the <wsa:To>.  Look at other existing operations templates to see generally
+    how this should be set -- or look at the http_logs in soapUI.  The "?" represents values that can be set,
+    just as how soapUI represents setable values.  DO NOT REMOVE the "?" from the templates.
+
+OPERATION = <<eos
+<soap:Envelope></soap:Envelope>
+eos
+
+The following is a real example of a complete template file:
+------
+module AccountServiceRequestTemplates
+
+AUTHORIZE = <<eos
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://gamestop.com/customers/account/v1">
+    <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action soap:mustUnderstand="1">?</wsa:Action>
+        <wsa:To soap:mustUnderstand="1">?</wsa:To>
+    </soap:Header>
+    <soap:Body>
+        <v1:AuthorizeRequest>
+            <v1:ClientChannel>?</v1:ClientChannel>
+            <v1:Password>?</v1:Password>
+            <v1:SessionID>?</v1:SessionID>
+            <v1:Username>?</v1:Username>
+        </v1:AuthorizeRequest>
+    </soap:Body>
+</soap:Envelope>
+eos
+
+end
+-------
+
+4. If defaults are deemed necessary, the setting of default values may be implemented as a dsl.  Dsl's may be added to
+"game_stop_soap_services_dsl.rb" file.  Currently, get_request_from_template_using_global_defaults() will set soap global
+defaults.  You may add defaults to this method, if you so need.
+
+5. If you have created a new file, you will need to add it to the "game_stop_service_templates_requires.rb" file.  Follow
+    existing entries for examples.
+
+=======
+
+In order to support dsl for soap services, a module is needed for each soap service.  The steps to add a new dsl module for 
+a soap service is as follows:
+
+1. If no dsl are currently supported for a service, a new file is needed.   This
+    file needs to be placed in the QAAutomation Scripts dsl Services directory..  For example:
+    * cd $env:QAAUTOMATION_SCRIPTS"/GameStop/dsl/src/Services"
+    * create a new file at this location named "dsl_<service_name>.rb"
+2. In this file add a ruby module.  Do this by adding "module GameStop<Service_class_name>DSL".
+    NOTE: the module MUST be named based off of the service's class name.  For example:
+        * CartService is created for a service pertaining to cart.
+        * GameStopCartServiceDSL MUST be the name of the module that will contain the dsl.
+3. If you have created a new file, you will need to add it to the "game_stop_service_dsl_requires.rb" file.  Follow
+    existing entries for examples.
+4. You will need to add this new module to the dsl.rb file found in the parent directory.  Simply monkey patch the Service.
+    For Example:
+        * CartService is created for a service pertaining to cart.
+        * GameStopCartServiceDSL is the name of the module that contains the dsl.
+        * Add the monkey patch:
+          class CartService
+            include GameStopCartServiceDsl
+          end
+        * Adjust service name accordingly.
+

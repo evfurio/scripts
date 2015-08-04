@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2005, Yantra Corporation. All rights reserved. -->
+<portlet xmlns="http://www.bea.com/servers/portal/xsd/portlet/1.0"
+    xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/servers/portal/xsd/portlet/1.0  portlet-1_0.xsd">
+  <portlet-name>YantraTest</portlet-name>
+  <is-complete>true</is-complete>
+  <description/>
+  <content-url>/console/test.jsp</content-url>
+  <header-url/>
+  <alternate-header-url/>
+  <footer-url/>
+  <alternate-footer-url/>
+  <titlebar-url>/framework/titlebar.jsp</titlebar-url>
+  <banner-url/>
+  <editable>false</editable>
+  <edit-url/>
+  <helpable>false</helpable>
+  <help-url/>
+  <icon-url>/portlets/dictionary/images/pt_dictionary.gif</icon-url>
+  <minimizable>true</minimizable>
+  <maximizable>true</maximizable>
+  <maximize-url/>
+  <mandatory>false</mandatory>
+  <movable>true</movable>
+  <floatable>true</floatable>
+  <default-minimized>false</default-minimized>
+  <login-required>true</login-required>
+</portlet>

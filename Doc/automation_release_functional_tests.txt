@@ -1,0 +1,105 @@
+GAMESTOP.COM/CHECKOUT FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do_auth_checkout
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48627 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_single_product.sql --db %QAAUTOMATION_SCRIPTS%\Common\config\databases.csv --db_env "QA_Catalog" --prop %QAAUTOMATION_SCRIPTS%\Common\config\properties.csv --url QA_GS --browser chrome --or
+
+# do_linkshare A:
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS65460 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_single_product.sql --db %QAAUTOMATION_SCRIPTS%\Common\config\databases.csv --db_env "QA_Catalog" --prop %QAAUTOMATION_SCRIPTS%\Common\config\properties.csv --affiliate_url QA_LINK1 --browser chrome --or
+
+# do_guest_checkout
+d-Con  %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\guest_checkout_spec.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48600 --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_single_product.sql --browser chrome --or
+
+# do_hops_with_pur
+d-Con --prop %QAAUTOMATION_SCRIPTS%\Common\config\properties.csv  --url QA_GS --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\hops_dataset.csv --range HOPS01 --login tstr3@gs.com --password T3sting --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_hops_product.sql --svc %QAAUTOMATION_SCRIPTS%\Common\config\endpoints.csv --svc_env QA_V1 --db %QAAUTOMATION_SCRIPTS%\Common\config\databases.csv --db_env "QA_Catalog" %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\hops_request_authenticated_user_spec.rb --browser chrome -e 'RequestHops as AuthenticatedUser when ShowHopsPURandCC is TRUE' --or
+
+# do_single_sign_on
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\SSO\single_sign_on_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\SSO\single_sign_on_dataset.csv --range TFS60309 --login bf_gsdc85@qagsecomprod.oib.com --password T3sting --browser chrome --or
+
+# do paypal guest checkout
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\guest_checkout_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS57661 --browser chrome --or
+
+# do paypal authenticated
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS57663 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --browser chrome --or
+
+# do ISPU authenticated
+d-Con  %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_ISPU_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48617 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --browser chrome --or
+
+# do a bulk search and verify
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\Search\search_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48600 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --browser chrome -e "should search for bulk results and validate" --or
+
+# do search for preowned product by filter
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\Search\search_spec.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48600 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --browser chrome -e "should search for preowned product" --or
+
+
+ECOMMERCE SERVICES FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do authenticated checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_regular.rb --login qa_srvcs_atmtn@qagsecomprod.oib.com --password T3sting --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range "TFS44309" --or
+
+# do guest checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_regular.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range TFS44309 --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_single_product.sql --db %QAAUTOMATION_SCRIPTS%\Common\config\databases.csv --db_env QA_Catalog --svc %QAAUTOMATION_SCRIPTS%\Common\config\endpoints.csv --svc_env QA_V1 --or
+
+# do authenticated ISPU checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_ISPU.rb --login qa_srvcs_atmtn@qagsecomprod.oib.com --password T3sting --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range "TFS46047" --or
+
+# do guest ISPU checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_ISPU.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range "TFS46048" --svc %QAAUTOMATION_SCRIPTS%\Common\config\endpoints.csv --svc_env QA_V1 --or
+
+# do auth DLC checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dlc.rb --login qa_srvcs_atmtn@qagsecomprod.oib.com --password T3sting --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range "TFS45281" --svc %QAAUTOMATION_SCRIPTS%\Common\config\endpoints.csv --svc_env QA_V1 --or
+
+# do guest DLC checkout using only the ecommerce services
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dlc.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\Services\Checkout\checkout_dataset.csv --range "TFS45280" --svc %QAAUTOMATION_SCRIPTS%\GameStop\Spec\endpoints.csv --svc_env QA_V1 --or
+
+
+MOBILE GAMESTOP (m.gamestop.com) FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do GS Mobile Checkout Physical Product Purchase using Valid CC as New User
+d-Con %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\GSmobile_new_user_checkout_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\mobile_dataset.csv  --range TFS47515  --browser chrome --or
+
+# do Verify HOPS Functionality in GS Mobile
+d-Con %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\GSmobile_guest_HOPS_request_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\mobile_dataset.csv  --range TFS64584  --browser chrome --or
+
+#do GS Mobile ISPU Checkout as an authenticated user
+d-Con %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\GSmobile_auth_user_checkout_ISPU_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStopMobile\spec\UI\mobile_dataset.csv  --range TFS47425 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting  --browser chrome --or
+
+#do GS Mobile PUR Activate
+d-con %QAAUTOMATION_SCRIPTS%\GameStopMobile\Spec\Pur_Activation\gsmobile_functional_pur_activate.rb  --csv %QAAUTOMATION_SCRIPTS%\GameStopMobile\Spec\UI\mobile_dataset.csv --range ACTIVATE1 --login enrolltestemail2709@gs.com --password fr@ud123 --browser chrome --or
+
+
+WEB IN STORE FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do validate WIS order entry
+d-Con %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_validate_orders_spec.rb --csv %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_UI_dataset.csv --range TFS47251  --browser chrome  --or
+
+# do validate product details on WIS
+d-Con %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_product_details_spec.rb  --csv %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_UI_dataset.csv --range TFS47256 --browser chrome  --or
+
+# do validate shipping options on WIS
+d-Con %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_checkout_shipping_options_spec.rb --csv %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_UI_dataset.csv --range  TFS49643 --browser chrome --or
+
+# do validate catalog search on WIS
+d-Con %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_catalog_search_spec.rb --csv %QAAUTOMATION_SCRIPTS%\WebInStore\Spec\UI\wis_UI_dataset.csv --range TFS49682 --browser chrome  --or
+
+
+POWERUP REWARDS FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do new member enroll and activation on PUR.com
+d-con %QAAUTOMATION_SCRIPTS%\PowerUpRewards\spec\pur_activation_spec.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48596 --browser chrome --or
+
+# do set communication preferences and choose new address for Profile
+d-con %QAAUTOMATION_SCRIPTS%\PowerUpRewards\spec\pur_regression_spec.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48596 --browser chrome -e "TC64738: CP - Communication Pref - Mail Pref - Choose New Address" --or
+
+# do login account spec for Profile
+d-Con %QAAUTOMATION_SCRIPTS%\PowerUpRewards\spec\login_account_spec.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\SSO\single_sign_on_dataset.csv --range TFS60309 --login bf_gsdc85@qagsecomprod.oib.com --password T3sting --browser chrome --or
+
+
+GAME INFORMER FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+# do create a new account through control panel / membership admin for GameInformer
+d-con %QAAUTOMATION_SCRIPTS%\GameInformer\spec\GI_Weekend_Maint.rb --csv %QAAUTOMATION_SCRIPTS%\GameInformer\spec\gameinformer_cs_dataset.csv --range TFS66752 -e 'should create a new account through control panel / membership admin' --browser chrome --or
+
+# do digimag exploratory functional charter for GameInformer
+d-con %QAAUTOMATION_SCRIPTS%\GameInformer\spec\GI_Digimag_Regression.rb --csv %QAAUTOMATION_SCRIPTS%\GameInformer\spec\gameinformer_cs_dataset.csv --range TFS65812 --browser chrome --or
+
+
+RECOMMERCE PUBLIC FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\RCM\rcm_set_home_store_locator_spec.rb --prop %QAAUTOMATION_SCRIPTS%\Common\config\properties.csv --url QA_GS --csv %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\RCM\tradevalue_dataset.csv --range TFS40155 --browser chrome --or
+
+
+BROWSER CAPABILITY FUNCTIONAL TESTS FOR AUTOMATION RELEASE VALIDATION
+d-Con %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\multiple_browser_sanity.rb --csv %QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\checkout_dataset.csv --range TFS48627 --login qa_ui_testing1@qagsecomprod.oib.com --password T3sting --sql %QAAUTOMATION_SCRIPTS%\Common\sql_queries\get_single_product.sql --db %QAAUTOMATION_SCRIPTS%\Common\config\databases.csv --db_env "QA_Catalog" --prop %QAAUTOMATION_SCRIPTS%\Common\config\properties.csv --url QA_GS --or

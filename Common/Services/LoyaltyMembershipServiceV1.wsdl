@@ -1,0 +1,307 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<wsdl:definitions name = "Untitled" 
+targetNamespace = "http://services.gamestop.com/Marketing/LoyaltyLifecycle/LoyaltyMembershipService-V1"
+ xmlns:shared = "http://schemas.gamestop.com/shared/commonschemas/v1.0" 
+ xmlns:ns1 = "http://schemas.gamestop.com/marketing/loyaltylifecycle/loyaltymembershipservice/messagetypes/v1.0" 
+ xmlns:faults = "http://schemas.gamestop.com/shared/commonschemas/faults/v1.0" 
+   xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/" 
+   xmlns:tns = "http://services.gamestop.com/Marketing/LoyaltyLifecycle/LoyaltyMembershipService-V1" 
+   xmlns:wsdl = "http://schemas.xmlsoap.org/wsdl/">
+       <wsdl:import location="../CommonSchemas/Faults-V1.xsd" namespace="http://schemas.gamestop.com/shared/commonschemas/faults/v1.0"/>
+       <wsdl:import location="../CommonSchemas/MessageHeader-V1.xsd" namespace="http://schemas.gamestop.com/shared/commonschemas/v1.0"/>
+	<wsdl:types>
+		<xs:schema attributeFormDefault = "unqualified" elementFormDefault = "qualified" targetNamespace = "http://schemas.gamestop.com/marketing/loyaltylifecycle/loyaltymembershipservice/messagetypes/v1.0" xmlns:ns0 = "http://schemas.gamestop.com/marketing/customerprofile/v1.0" xmlns:ns5 = "http://schemas.gamestop.com/commontypes/v1.0" xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace = "http://schemas.gamestop.com/marketing/customerprofile/v1.0" schemaLocation = "../../CustomerProfile/Customer-V1.xsd"/>
+
+			<xs:complexType name = "EnrollCustomerForMembershipRequest">
+				<xs:sequence>
+					<xs:element name = "Customer" type = "ns0:Customer"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "EnrollCustomerForMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "RefundCustomerMembershipRequest">
+				<xs:sequence>
+					<xs:element name = "Customer" type = "ns0:Customer"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "RefundCustomerMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "RenewCustomerMembershipRequest">
+				<xs:sequence>
+					<xs:element name = "Customer" type = "ns0:Customer"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "RenewCustomerMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "UpgradeCustomerMembershipRequest">
+				<xs:sequence>
+					<xs:element name = "Customer" type = "ns0:Customer"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "UpgradeCustomerMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "VoidCustomerMembershipRequest">
+				<xs:sequence>
+					<xs:element name = "Customer" type = "ns0:Customer"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "VoidCustomerMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "ActivateCustomerMembershipRequest">
+				<xs:sequence>
+					<xs:element name="LoyaltyCardNumber" type="xs:string" nillable="true" minOccurs="1"/>
+					<xs:element name="OpenIdClaimedIdentifier" type="xs:string" nillable="true" minOccurs="1"/>
+					<xs:element name="CardStatus" type="xs:string" nillable="true" minOccurs="1"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name = "ActivateCustomerMembershipResponse">
+				<xs:sequence>
+					<xs:element name = "Status" type = "xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name = "EnrollCustomerForMembershipRequest" nillable = "true" type = "ns1:EnrollCustomerForMembershipRequest"/>
+			<xs:element name = "EnrollCustomerForMembershipResponse" nillable = "true" type = "ns1:EnrollCustomerForMembershipResponse"/>
+			<xs:element name = "RefundCustomerMembershipRequest" nillable = "true" type = "ns1:RefundCustomerMembershipRequest"/>
+			<xs:element name = "RefundCustomerMembershipResponse" nillable = "true" type = "ns1:RefundCustomerMembershipResponse"/>
+			<xs:element name = "RenewCustomerMembershipRequest" nillable = "true" type = "ns1:RenewCustomerMembershipRequest"/>
+			<xs:element name = "RenewCustomerMembershipResponse" nillable = "true" type = "ns1:RenewCustomerMembershipResponse"/>
+			<xs:element name = "UpgradeCustomerMembershipRequest" nillable = "true" type = "ns1:UpgradeCustomerMembershipRequest"/>
+			<xs:element name = "UpgradeCustomerMembershipResponse" nillable = "true" type = "ns1:UpgradeCustomerMembershipResponse"/>
+			<xs:element name = "VoidCustomerMembershipRequest" nillable = "true" type = "ns1:VoidCustomerMembershipRequest"/>
+			<xs:element name = "VoidCustomerMembershipResponse" nillable = "true" type = "ns1:VoidCustomerMembershipResponse"/>
+			<xs:element name = "ActivateCustomerMembershipRequest" nillable = "true" type = "ns1:ActivateCustomerMembershipRequest"/>
+			<xs:element name = "ActivateCustomerMembershipResponse" nillable = "true" type = "ns1:ActivateCustomerMembershipResponse"/>
+		</xs:schema>
+		
+	</wsdl:types>
+	<wsdl:service name = "LoyaltyMembershipService-V1">
+		<wsdl:port binding = "tns:LoyaltyMembershipService_V1Binding" name = "LoyaltyMembershipService_V1">
+			<soap:address location = "http://gv1hqdtb01.testgs.pvt:8092/Marketing/LoyaltyLifecycle/LoyaltyMembershipService"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsdl:portType name = "LoyaltyMembershipService_V1">
+		<wsdl:operation name = "RefundCustomerMembership">
+			<wsdl:input message = "tns:RefundCustomerMembershipRequest"/>
+			<wsdl:output message = "tns:RefundCustomerMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name = "EnrollCustomerForMembership">
+			<wsdl:input message = "tns:EnrollCustomerForMembershipRequest"/>
+			<wsdl:output message = "tns:EnrollCustomerForMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name = "VoidCustomerMembership">
+			<wsdl:input message = "tns:VoidCustomerMembershipRequest"/>
+			<wsdl:output message = "tns:VoidCustomerMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name = "RenewCustomerMembership">
+			<wsdl:input message = "tns:RenewCustomerMembershipRequest"/>
+			<wsdl:output message = "tns:RenewCustomerMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name = "UpgradeCustomerMembership">
+			<wsdl:input message = "tns:UpgradeCustomerMembershipRequest"/>
+			<wsdl:output message = "tns:UpgradeCustomerMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+		<wsdl:operation name = "ActivateCustomerMembership">
+			<wsdl:input message = "tns:ActivateCustomerMembershipRequest"/>
+			<wsdl:output message = "tns:ActivateCustomerMembershipResponse"/>
+			<wsdl:fault message = "tns:SenderFaultDetail" name = "SenderFaultDetail"/>
+			<wsdl:fault message = "tns:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+			<wsdl:fault message = "tns:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name = "LoyaltyMembershipService_V1Binding" type = "tns:LoyaltyMembershipService_V1">
+		<soap:binding style = "document" transport = "http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name = "RefundCustomerMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/RefundCustomerMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "RefundCustomerMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "RefundCustomerMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name = "EnrollCustomerForMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/EnrollCustomerForMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "EnrollCustomerForMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "EnrollCustomerForMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name = "VoidCustomerMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/VoidCustomerMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "VoidCustomerMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "VoidCustomerMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name = "RenewCustomerMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/RenewCustomerMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "RenewCustomerMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "RenewCustomerMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name = "UpgradeCustomerMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/UpgradeCustomerMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "UpgradeCustomerMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "UpgradeCustomerMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name = "ActivateCustomerMembership">
+			<soap:operation soapAction = "/Marketing/LoyaltyLifecycle/LoyaltyMembershipService/ActivateCustomerMembership" style = "document"/>
+			<wsdl:input>
+				<soap:body parts = "ActivateCustomerMembershipRequest" use = "literal"/>
+				<soap:header message = "tns:SoapHeaders" part = "MessageHeader" use = "literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts = "ActivateCustomerMembershipResponse" use = "literal"/>
+			</wsdl:output>
+			<wsdl:fault name = "SenderFaultDetail">
+				<soap:fault name = "SenderFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ExpectedFaultDetail">
+				<soap:fault name = "ExpectedFaultDetail" use = "literal"/>
+			</wsdl:fault>
+			<wsdl:fault name = "ReceiverFaultDetail">
+				<soap:fault name = "ReceiverFaultDetail" use = "literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:message name = "SoapHeaders">
+		<wsdl:part element = "shared:MessageHeaders" name = "MessageHeader"/>
+	</wsdl:message>
+	<wsdl:message name = "RefundCustomerMembershipRequest">
+		<wsdl:part element = "ns1:RefundCustomerMembershipRequest" name = "RefundCustomerMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "RefundCustomerMembershipResponse">
+		<wsdl:part element = "ns1:RefundCustomerMembershipResponse" name = "RefundCustomerMembershipResponse"/>
+	</wsdl:message>
+	<wsdl:message name = "SenderFaultDetail">
+		<wsdl:part element = "faults:SenderFaultDetail" name = "SenderFaultDetail"/>
+	</wsdl:message>
+	<wsdl:message name = "ExpectedFaultDetail">
+		<wsdl:part element = "faults:ExpectedFaultDetail" name = "ExpectedFaultDetail"/>
+	</wsdl:message>
+	<wsdl:message name = "ReceiverFaultDetail">
+		<wsdl:part element = "faults:ReceiverFaultDetail" name = "ReceiverFaultDetail"/>
+	</wsdl:message>
+	<wsdl:message name = "EnrollCustomerForMembershipRequest">
+		<wsdl:part element = "ns1:EnrollCustomerForMembershipRequest" name = "EnrollCustomerForMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "EnrollCustomerForMembershipResponse">
+		<wsdl:part element = "ns1:EnrollCustomerForMembershipResponse" name = "EnrollCustomerForMembershipResponse"/>
+	</wsdl:message>
+	<wsdl:message name = "VoidCustomerMembershipRequest">
+		<wsdl:part element = "ns1:VoidCustomerMembershipRequest" name = "VoidCustomerMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "VoidCustomerMembershipResponse">
+		<wsdl:part element = "ns1:VoidCustomerMembershipResponse" name = "VoidCustomerMembershipResponse"/>
+	</wsdl:message>
+	<wsdl:message name = "RenewCustomerMembershipRequest">
+		<wsdl:part element = "ns1:RenewCustomerMembershipRequest" name = "RenewCustomerMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "RenewCustomerMembershipResponse">
+		<wsdl:part element = "ns1:RenewCustomerMembershipResponse" name = "RenewCustomerMembershipResponse"/>
+	</wsdl:message>
+	<wsdl:message name = "UpgradeCustomerMembershipRequest">
+		<wsdl:part element = "ns1:UpgradeCustomerMembershipRequest" name = "UpgradeCustomerMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "UpgradeCustomerMembershipResponse">
+		<wsdl:part element = "ns1:UpgradeCustomerMembershipResponse" name = "UpgradeCustomerMembershipResponse"/>
+	</wsdl:message>
+	<wsdl:message name = "ActivateCustomerMembershipRequest">
+		<wsdl:part element = "ns1:ActivateCustomerMembershipRequest" name = "ActivateCustomerMembershipRequest"/>
+	</wsdl:message>
+	<wsdl:message name = "ActivateCustomerMembershipResponse">
+		<wsdl:part element = "ns1:ActivateCustomerMembershipResponse" name = "ActivateCustomerMembershipResponse"/>
+	</wsdl:message>
+</wsdl:definitions>

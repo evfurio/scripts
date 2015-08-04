@@ -1,0 +1,888 @@
+module CustomerProfileServiceRequestTemplates
+
+  CREATE_ADDRESS = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:CreateAddressRequest>
+         <v11:Address>
+            <!--Optional:-->
+            <AddressID>?</AddressID>
+            <AddressType>?</AddressType>
+            <AddressLine1>?</AddressLine1>
+            <!--Optional:-->
+            <AddressLine2>?</AddressLine2>
+            <City>?</City>
+            <!--Optional:-->
+            <StateOrProvince>?</StateOrProvince>
+            <!--Optional:-->
+            <PostalCode>?</PostalCode>
+            <Country>?</Country>
+            <!--Optional:-->
+            <ProfileId>?</ProfileId>
+            <!--Optional:-->
+            <RecipientFirstName>?</RecipientFirstName>
+            <!--Optional:-->
+            <RecipientLastName>?</RecipientLastName>
+            <!--Optional:-->
+            <RecipientPhoneNumber>?</RecipientPhoneNumber>
+            <!--Optional:-->
+            <IsDefault>?</IsDefault>
+            <!--Optional:-->
+            <IsValidated>?</IsValidated>
+         </v11:Address>
+         <v11:OpenIdClaimedIdentifier>?</v11:OpenIdClaimedIdentifier>
+      </v11:CreateAddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  CREATE_PHONE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:CreatePhoneRequest>
+         <v11:OpenIdClaimedIdentifier>?</v11:OpenIdClaimedIdentifier>
+         <v11:Phone>
+            <!--Optional:-->
+            <PhoneId>?</PhoneId>
+            <!--Optional:-->
+            <PhoneNumber>?</PhoneNumber>
+            <!--Optional:-->
+            <PhoneNumberType>?</PhoneNumberType>
+            <!--Optional:-->
+            <ProfileId>?</ProfileId>
+         </v11:Phone>
+      </v11:CreatePhoneRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  CREATE_PREFERRED_STORE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:CreatePreferredStoreRequest>
+         <v11:PreferredStore>
+            <!--Optional:-->
+            <IsHomeStore>?</IsHomeStore>
+            <!--Optional:-->
+            <PreferredStoreId>?</PreferredStoreId>
+            <!--Optional:-->
+            <StoreNumber>?</StoreNumber>
+         </v11:PreferredStore>
+         <v11:OpenIdClaimedIdentifier>?</v11:OpenIdClaimedIdentifier>
+      </v11:CreatePreferredStoreRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  CREATE_PROFILE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0" xmlns:v12="http://schemas.gamestop.com/marketing/customerprofile/v1.0" xmlns:v13="http://schemas.gamestop.com/marketing/dataverification/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:CreateProfileRequest>
+         <v12:Profile>
+            <!--Optional:-->
+            <v12:ProfileID>?</v12:ProfileID>
+            <!--Optional:-->
+            <v12:FirstName>?</v12:FirstName>
+            <!--Optional:-->
+            <v12:MiddleName>?</v12:MiddleName>
+            <!--Optional:-->
+            <v12:LastName>?</v12:LastName>
+            <!--Optional:-->
+            <v12:EmailAddress>?</v12:EmailAddress>
+            <!--Optional:-->
+            <v12:EmailIsInvalid>?</v12:EmailIsInvalid>
+            <!--Optional:-->
+            <v12:DisplayName>?</v12:DisplayName>
+            <!--Optional:-->
+            <v12:BirthDate>
+               <!--Optional:-->
+               <BirthMonth>?</BirthMonth>
+               <!--Optional:-->
+               <BirthDay>?</BirthDay>
+               <!--Optional:-->
+               <BirthYear>?</BirthYear>
+            </v12:BirthDate>
+            <!--Optional:-->
+            <v12:Gender>?</v12:Gender>
+            <!--Optional:-->
+            <v12:CustomerKey>
+               <!--Optional:-->
+               <v12:MembershipId>?</v12:MembershipId>
+               <!--Optional:-->
+               <v12:OpenIdClaimedIdentifier>?</v12:OpenIdClaimedIdentifier>
+            </v12:CustomerKey>
+            <!--Optional:-->
+            <v12:Addresses>
+               <!--Zero or more repetitions:-->
+               <Address>
+                  <!--Optional:-->
+                  <AddressID>?</AddressID>
+                  <AddressType>?</AddressType>
+                  <AddressLine1>?</AddressLine1>
+                  <!--Optional:-->
+                  <AddressLine2>?</AddressLine2>
+                  <City>?</City>
+                  <!--Optional:-->
+                  <StateOrProvince>?</StateOrProvince>
+                  <!--Optional:-->
+                  <PostalCode>?</PostalCode>
+                  <Country>?</Country>
+                  <!--Optional:-->
+                  <ProfileId>?</ProfileId>
+                  <!--Optional:-->
+                  <RecipientFirstName>?</RecipientFirstName>
+                  <!--Optional:-->
+                  <RecipientLastName>?</RecipientLastName>
+                  <!--Optional:-->
+                  <RecipientPhoneNumber>?</RecipientPhoneNumber>
+                  <!--Optional:-->
+                  <IsDefault>?</IsDefault>
+                  <!--Optional:-->
+                  <IsValidated>?</IsValidated>
+               </Address>
+            </v12:Addresses>
+            <!--Optional:-->
+            <v12:Phones>
+               <!--Zero or more repetitions:-->
+               <Phone>
+                  <!--Optional:-->
+                  <PhoneId>?</PhoneId>
+                  <!--Optional:-->
+                  <PhoneNumber>?</PhoneNumber>
+                  <!--Optional:-->
+                  <PhoneNumberType>?</PhoneNumberType>
+                  <!--Optional:-->
+                  <ProfileId>?</ProfileId>
+               </Phone>
+            </v12:Phones>
+            <!--Optional:-->
+            <v12:PreferredStores>
+               <!--Zero or more repetitions:-->
+               <PreferredStore>
+                  <!--Optional:-->
+                  <IsHomeStore>?</IsHomeStore>
+                  <!--Optional:-->
+                  <PreferredStoreId>?</PreferredStoreId>
+                  <!--Optional:-->
+                  <StoreNumber>?</StoreNumber>
+               </PreferredStore>
+            </v12:PreferredStores>
+            <!--Optional:-->
+            <v13:Overrides>
+               <!--Optional:-->
+               <v13:EmailAddress>?</v13:EmailAddress>
+               <!--Optional:-->
+               <v13:Address>?</v13:Address>
+               <!--Optional:-->
+               <v13:Phone>?</v13:Phone>
+            </v13:Overrides>
+            <!--Optional:-->
+            <v13:DataVerifications>
+               <!--Optional:-->
+               <v13:EmailVerificationStatus>?</v13:EmailVerificationStatus>
+               <!--Optional:-->
+               <v13:AddressVerificationStatus>?</v13:AddressVerificationStatus>
+               <!--Optional:-->
+               <v13:PhoneVerificationStatus>?</v13:PhoneVerificationStatus>
+            </v13:DataVerifications>
+         </v12:Profile>
+      </v11:CreateProfileRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  DELETE_ADDRESS = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:DeleteAddressRequest>
+         <v11:AddressID>?</v11:AddressID>
+      </v11:DeleteAddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  DELETE_PHONE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:DeletePhoneRequest>
+         <v11:PhoneID>?</v11:PhoneID>
+      </v11:DeletePhoneRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  DELETE_PREFERRED_STORE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:DeletePreferredStoreRequest>
+         <v11:PreferredStoreID>?</v11:PreferredStoreID>
+      </v11:DeletePreferredStoreRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  GET_EXTENDED_PROFILE_BY_OPEN_ID = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:GetExtendedProfilesByOpenIDRequest>
+         <v11:OpenIdClaimedIdentifier>?</v11:OpenIdClaimedIdentifier>
+         <!--Optional:-->
+         <v11:ExtendedProfileRequests>
+            <!--Optional:-->
+            <v11:MembershipsRequest/>
+            <!--Optional:-->
+            <v11:GameLibraryRequest/>
+            <!--Optional:-->
+            <v11:ReservationsRequest/>
+            <!--Optional:-->
+            <v11:DigitalLockerRequest/>
+            <!--Optional:-->
+            <v11:PointsInformationRequest/>
+         </v11:ExtendedProfileRequests>
+      </v11:GetExtendedProfilesByOpenIDRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  GET_PROFILE_BY_CARD_NUMBER = <<eos
+
+eos
+
+  GET_PROFILE_BY_PROFILE_ID = <<eos
+
+eos
+
+  GET_VERSION = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:GetVersionRequest/>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  SEARCH_PROFILE_BY_EMAIL = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:SearchProfileByEmailRequest>
+         <v11:EmailAddress>?</v11:EmailAddress>
+         <!--Optional:-->
+         <v11:ExtendedProfileRequests>
+            <!--Optional:-->
+            <v11:MembershipsRequest/>
+            <!--Optional:-->
+            <v11:GameLibraryRequest/>
+            <!--Optional:-->
+            <v11:ReservationsRequest/>
+            <!--Optional:-->
+            <v11:DigitalLockerRequest/>
+            <!--Optional:-->
+            <v11:PointsInformationRequest/>
+         </v11:ExtendedProfileRequests>
+      </v11:SearchProfileByEmailRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  SEARCH_PROFILE_BY_LAST_NAME_AND_ZIP = <<eos
+
+eos
+
+  SEARCH_PROFILE_BY_OPEN_ID = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:SearchProfileByOpenIDRequest>
+         <v11:OpenIdClaimedIdentifier>?</v11:OpenIdClaimedIdentifier>
+         <!--Optional:-->
+         <v11:ExtendedProfileRequests>
+            <!--Optional:-->
+            <v11:MembershipsRequest/>
+            <!--Optional:-->
+            <v11:GameLibraryRequest/>
+            <!--Optional:-->
+            <v11:ReservationsRequest/>
+            <!--Optional:-->
+            <v11:DigitalLockerRequest/>
+            <!--Optional:-->
+            <v11:PointsInformationRequest/>
+         </v11:ExtendedProfileRequests>
+      </v11:SearchProfileByOpenIDRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  SEARCH_PROFILE_BY_PHONE_NUMBER = <<eos
+
+eos
+
+  UPDATE_ADDRESS = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:UpdateAddressRequest>
+         <v11:Address>
+            <!--Optional:-->
+            <AddressID>?</AddressID>
+            <AddressType>?</AddressType>
+            <AddressLine1>?</AddressLine1>
+            <!--Optional:-->
+            <AddressLine2>?</AddressLine2>
+            <City>?</City>
+            <!--Optional:-->
+            <StateOrProvince>?</StateOrProvince>
+            <!--Optional:-->
+            <PostalCode>?</PostalCode>
+            <Country>?</Country>
+            <!--Optional:-->
+            <ProfileId>?</ProfileId>
+            <!--Optional:-->
+            <RecipientFirstName>?</RecipientFirstName>
+            <!--Optional:-->
+            <RecipientLastName>?</RecipientLastName>
+            <!--Optional:-->
+            <RecipientPhoneNumber>?</RecipientPhoneNumber>
+            <!--Optional:-->
+            <IsDefault>?</IsDefault>
+            <!--Optional:-->
+            <IsValidated>?</IsValidated>
+         </v11:Address>
+      </v11:UpdateAddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  UPDATE_PHONE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:UpdatePhoneRequest>
+         <v11:Phone>
+            <!--Optional:-->
+            <PhoneId>?</PhoneId>
+            <!--Optional:-->
+            <PhoneNumber>?</PhoneNumber>
+            <!--Optional:-->
+            <PhoneNumberType>?</PhoneNumberType>
+            <!--Optional:-->
+            <ProfileId>?</ProfileId>
+         </v11:Phone>
+      </v11:UpdatePhoneRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  UPDATE_PREFERRED_STORE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:UpdatePreferredStoreRequest>
+         <v11:PreferredStore>
+            <!--Optional:-->
+            <IsHomeStore>?</IsHomeStore>
+            <!--Optional:-->
+            <PreferredStoreId>?</PreferredStoreId>
+            <!--Optional:-->
+            <StoreNumber>?</StoreNumber>
+         </v11:PreferredStore>
+      </v11:UpdatePreferredStoreRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+  UPDATE_PROFILE = <<eos
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://schemas.gamestop.com/shared/commonschemas/v1.0" xmlns:v11="http://schemas.gamestop.com/marketing/customerprofile/customerprofileservice/messagetypes/v1.0" xmlns:v12="http://schemas.gamestop.com/marketing/customerprofile/v1.0" xmlns:v13="http://schemas.gamestop.com/marketing/dataverification/v1.0">
+   <soapenv:Header>
+      <v1:MessageHeaders>
+         <!--Optional:-->
+         <MachineName>?</MachineName>
+         <!--Optional:-->
+         <KeyValuePairs>
+            <!--Zero or more repetitions:-->
+            <KeyValuePair>
+               <Key>?</Key>
+               <Value>?</Value>
+            </KeyValuePair>
+         </KeyValuePairs>
+         <!--Optional:-->
+         <CultureInfo>
+            <Locale>?</Locale>
+            <TimeZone>?</TimeZone>
+            <CountryCode>?</CountryCode>
+         </CultureInfo>
+         <!--Optional:-->
+         <SecurityToken>
+            <!--Optional:-->
+            <UserNameToken>
+               <!--Optional:-->
+               <UserName>?</UserName>
+               <!--Optional:-->
+               <Password>?</Password>
+            </UserNameToken>
+            <!--Optional:-->
+            <ClientKey>?</ClientKey>
+         </SecurityToken>
+      </v1:MessageHeaders>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v11:UpdateProfileRequest>
+         <v12:UpdateProfile>
+            <v12:OpenIdClaimedIdentifier>?</v12:OpenIdClaimedIdentifier>
+            <!--Optional:-->
+            <v12:FirstName>?</v12:FirstName>
+            <!--Optional:-->
+            <v12:MiddleName>?</v12:MiddleName>
+            <!--Optional:-->
+            <v12:LastName>?</v12:LastName>
+            <v12:EmailAddress>?</v12:EmailAddress>
+            <!--Optional:-->
+            <v12:DisplayName>?</v12:DisplayName>
+            <!--Optional:-->
+            <v12:BirthDate>
+               <!--Optional:-->
+               <BirthMonth>?</BirthMonth>
+               <!--Optional:-->
+               <BirthDay>?</BirthDay>
+               <!--Optional:-->
+               <BirthYear>?</BirthYear>
+            </v12:BirthDate>
+            <!--Optional:-->
+            <v12:Gender>?</v12:Gender>
+            <!--Optional:-->
+            <v13:Overrides>
+               <!--Optional:-->
+               <v13:EmailAddress>?</v13:EmailAddress>
+               <!--Optional:-->
+               <v13:Address>?</v13:Address>
+               <!--Optional:-->
+               <v13:Phone>?</v13:Phone>
+            </v13:Overrides>
+            <!--Optional:-->
+            <v13:DataVerifications>
+               <!--Optional:-->
+               <v13:EmailVerificationStatus>?</v13:EmailVerificationStatus>
+               <!--Optional:-->
+               <v13:AddressVerificationStatus>?</v13:AddressVerificationStatus>
+               <!--Optional:-->
+               <v13:PhoneVerificationStatus>?</v13:PhoneVerificationStatus>
+            </v13:DataVerifications>
+         </v12:UpdateProfile>
+      </v11:UpdateProfileRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+eos
+
+
+end

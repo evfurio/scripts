@@ -1,0 +1,81 @@
+Scripts we have:
+
+--------------------------------------------------
+UI Pre-Sanity (Build Validation)
+--------------------------------------------------
+Build Info Text Evaluator - gamestop, checkout, wis
+Assembly Info Evaluator - all services
+
+--------------------------------------------------
+UI Scripts Sanity
+--------------------------------------------------
+Can Search 
+Can Login - GS.com
+Can Checkout as Existing User - Checkout Login
+Can Checkout as Guest User
+Can Checkout with Services
+Can Complete HOPS
+
+Can WIS as Existing Customer
+Can WIS as New Customer
+Can WIS Checkout with Services
+OrderWebService Lookup
+
+Recommerce Web
+
+--------------------------------------------------
+UI Scripts Smoke
+--------------------------------------------------
+Account
+	Can Create New Account
+	Can Authenticate Existing User
+	Can Authenticate New User
+	Can Authenticate Anonymous User
+	Can Create New Account and Populate Digital Wallet
+
+Search
+	Keyword Search - Some additional work is required for no matches, single results and list matches
+	Bulk Search - Sort and Filter
+	
+Store Search
+	Can Search for Stores
+
+Cart
+	Add Product to Cart From PDP
+	Add Product to Cart From Search Results
+	Add Product to Cart From Affiliate Link
+	Add Product to Cart From AddToCart
+	Add Product to Cart From LoyaltyAddToCart
+	Add Multiple Products to Cart from PDP/Search
+	Can Checkout with Domestic Addresses
+	Can Checkout with International Addresses
+	Can Checkout for ISPU (EMAIL)
+	Add Products to Cart Service, Validate Cart UI (Authenicated Only)
+
+Authenticated Checkout
+	Single Product
+	Multiple Product
+	DLC Product
+	Mixed DLC Product
+	
+Guest Checkout
+	Gift Card
+	ISPU
+	Single Product
+	Multiple Product
+	DLC Product
+	Mixed DLC Product
+	
+HOPS
+	Search For HOPS Enabled Products
+	HOPS Store Search
+	Authenticated w/PUR
+	Authenticated w/o PUR
+	Guest w/PUR
+	Guest w/o PUR
+	
+Omniture Validation
+	New Checkout
+
+Header/Login GS.com/Checkout
+

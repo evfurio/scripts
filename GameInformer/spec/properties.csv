@@ -1,0 +1,11 @@
+server,url,affiliate_url
+DEV_GI,,
+DEV_CRM,,
+QA_GI,http://qa.gameinformer.com,
+QA2_GI,http://qa2.gameinformer.com,
+QA_CRM,http://qa.crm.gameinformer.com/,
+QA2_CRM,http://qa2.crm.gameinformer.com/,
+QA_SPAM,http://qa.spamportal.gameinformer.com,
+,,
+PROD_GI,http://gameinformer.com,
+PROD_CRM,,

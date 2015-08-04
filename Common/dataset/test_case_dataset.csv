@@ -1,0 +1,2 @@
+id,script_name,file_name,product,functional_area,role,focus,entry,exit,sql_query,db_env,svc_env,prop_url,browser
+TFS48627,Authenticated User Checkout,%QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\authenticated_user_checkout_spec.rb,GS,Checkout,AU,Order Entry,PDP,OrderConfirmation,Get_Available_Not_Mature_Products.sql,QA_Catalog,QA_V1,QA_GS,chrome

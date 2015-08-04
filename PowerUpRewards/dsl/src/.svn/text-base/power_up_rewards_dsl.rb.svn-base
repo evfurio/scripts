@@ -1,0 +1,79 @@
+# This file contains the domain specific language (DSL) methods for interacting
+# with the Game Stop website.
+#
+# The class named GameStopBrowser is the main class for this DSL.
+#
+# Author::
+# Copyright:: Copyright (c) 2011 GameStop, Inc.
+# Not for external distribution.
+
+# = Overview
+# This class is the the domain specific language (DSL) class for interacting
+# with the Game Stop website. The methods are defined here but are
+# accessed via GameStopBrowser.
+# = Usage
+# See the documentation for GameStopBrowser for examples.
+#
+
+require "bigdecimal"
+
+module PowerUpRewardsDSL
+  # Deletes any left over cookies, sets the browser type and sets up
+  # the snapshot and tracer.
+  def setup_before_all_scenarios
+    close_browsers_and_delete_cookies
+
+    if (os_name =~ /mswin/i)
+      self.ie
+    else
+        raise Exception.new("Unable to continue, cannot be executed under #{os_name}, only mswin")
+    end
+
+    # We want a browser snapshot on failure and we want to see trace statements.
+    $snapshots.setup(self, :all)
+    $tracer.mode = :on
+    $tracer.echo = :on
+  end
+
+  # Most common tasks run before each test (now in a nice package).
+  # === Parameters:
+  # ::__url__ The url for the browser to open
+  def setup_before_each_scenario(url)
+    # Some of the stuff in this method would be a more natural fit in the after(:each) but
+    # we can't use after(:each) for browser-based clean up at this time because it iterferes
+    # with the automatic snapshots.
+    ensure_only_one_browser_window_open
+    open(url)
+
+  end
+
+  # remove all but the first browser window from the the browser array.
+  def ensure_only_one_browser_window_open
+    if(browser_count > 1)
+      for i in (browser_count - 1) .. 1
+        browser(i).close
+      end
+    end
+
+    browser(0)
+  end
+
+  # Close all browsers and delete cookies.
+  def close_browsers_and_delete_cookies
+    close_all
+    m = $options.silent_mode
+    $options.silent_mode = true
+    if (os_name == "mswin32")
+      ie
+      mozilla
+    elsif (os_name == "darwin")
+      safari
+    end
+    for i in 0..(browser_count - 1)
+      browser(i).cookie.all.delete
+    end
+    close_all
+    $options.silent_mode = m
+  end
+
+end

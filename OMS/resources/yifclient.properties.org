@@ -1,0 +1,78 @@
+# Copyright 2006-2008, Sterling Commerce, Inc. All rights reserved.
+#---------------------------------------------------------------------------
+# The properties associated with JNDI for performing an EJB api call are here
+#-----------------------------------------------------------------------------
+#for WebLogic
+#java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
+#java.naming.provider.url=t3://<ipaddress>:<port>
+
+#for WebSphere
+#java.naming.factory.initial=com.ibm.websphere.naming.WsnInitialContextFactory
+#java.naming.provider.url=iiop://<ipAddress>:<port>
+
+#for GIS,  the naming properties are not relevant since it does not support EJB.
+#java.naming.factory.initial=
+#java.naming.provider.url=
+
+
+#java.naming.security.principal=
+#java.naming.security.credentials=
+#java.naming.referral=
+#java.naming.security.protocol=
+
+#This value has to be one of HTTP, HTTPS, EJB or LOCAL (For GIS,  the value cannot be EJB.)
+yif.apifactory.protocol=HTTPS
+
+yif.httpapi.url=https://gv1hqqomsw03.testgs.pvt:8443/smcfs/interop/InteropHttpServlet
+yif.mime.boundary=JJKHASDksks9485978Ksdamma9037
+
+
+#Set the following properties if you are using HTTPS
+#Set the location of the key store file, if you are using client side digital certificates
+#javax.net.ssl.keyStore=
+#javax.net.ssl.keyStorePassword=
+#The following two properties should be set for server certificate authentication
+#The trust store is the location of the file where the server certificate root was imported
+#javax.net.ssl.trustStore=
+#javax.net.ssl.trustStorePassword=
+
+#Set the following userid and password to use basic authentication over HTTP or HTTPS
+#UserId for basic authentication over HTTP or HTTPS
+yif.httpapi.userid=admin
+#Password for basic authentication over HTTP or HTTPS
+yif.httpapi.password=password
+
+#Set the following to disable selective aspects of HTTPS.
+#Disable client certificates
+yif.httpapi.disableKeyStore=true
+#Disable verification of server certificates
+yif.httpapi.disableTrustStore=true
+#Disable verification of the remote server name when using HTTPS
+yif.httpapi.disableHostnameVerification=true
+
+#Set the following to use a custom URLStreamHandler. Depending on configuration,
+#this may be required when making outbound HTTPS requests from a WebLogic server.
+#yif.httpapi.urlStreamHandler=sun.net.www.protocol.https.Handler
+
+#If international charset is used and HTTP is the specified as the transport in
+#yif.apifactory.protocol for api invocation, the following system 
+#property should be set for the client jvm.
+#	file.encoding=UTF-8
+#Example java -Dfile.encoding=UTF-8 <clientClass being invoked>.
+
+#The following property has to be set for each api that has to be
+#invoked in a backward compatibility mode. 
+#The valid values for this property are ver32, ver40, ver45
+#yfs.api.<apiname>.version= 
+
+# This class will be used for encrypting and decrypting properties.
+# Refer to the javadocs for the YCPEncrypter interface for information about how to write your own property encrypter class
+#yfs.propertyencrypter.class=
+
+#If yfs.login is true, the client will keep track of login calls, and attempt
+#to automatically re-login if the user token times out. Note this internally
+#requires keeping a copy of the user and password information in local client
+#memory.
+#The default value is false, which prevents this behavior.
+#yfs.relogin=false
+

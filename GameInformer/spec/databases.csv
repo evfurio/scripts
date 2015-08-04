@@ -1,0 +1,5 @@
+Name,Server,Database,Port
+DEV_GI,,,
+QA_GI,"DL1GSQDB01SQL02.TESTECOM.PVT\INST02,5512",Gameinfomer,
+,,,
+PROD_GI,,,

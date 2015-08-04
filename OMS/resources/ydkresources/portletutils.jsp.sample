@@ -1,0 +1,165 @@
+<%/* Copyright � 2005, Yantra Corporation. All rights reserved. */%>
+<%@ page import="java.text.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="java.net.URLEncoder"%>
+<%@ page import="com.yantra.yfc.dom.*"%>
+<%@ page import="com.yantra.yfc.core.*"%>
+<%@ page import="com.yantra.yfc.util.*"%>
+<%@ page import="com.yantra.interop.japi.*"%>
+<%@ page import="com.yantra.yfs.japi.*"%>
+<%@ page import="org.apache.jetspeed.portlet.*"%>
+<%@ page import="org.apache.jetspeed.portlets.*"%><%!
+    HttpServletRequest prequest;
+    
+    public void setRequest(HttpServletRequest req) {
+        prequest = req;
+    }
+    
+    public String getFormattedLong(long val) throws Exception {
+        Locale outputLocale = getLocale();
+        if (outputLocale == null) {
+            return String.valueOf(val);
+        }
+        NumberFormat inf = NumberFormat.getInstance();
+        NumberFormat onf = NumberFormat.getInstance(outputLocale) ;
+        Number num = inf.parse(String.valueOf(val));
+        return onf.format(num);
+    }
+
+    public String getFormattedInt(int val) throws Exception {
+        return getFormattedLong(val);
+    }
+
+    public String getFormattedDouble(double val) throws Exception {
+        Locale outputLocale = getLocale();
+        if (outputLocale == null) {
+            return (new Double(val).toString());
+        }
+
+        NumberFormat inf = NumberFormat.getInstance();
+        NumberFormat onf = NumberFormat.getInstance(outputLocale) ;
+        onf.setMinimumFractionDigits(2);
+        onf.setMaximumFractionDigits(10);
+        Number num = inf.parse(String.valueOf(val));
+        return onf.format(num);
+    }
+
+    public String getFormattedDate(String val, boolean ignoreTime) throws Exception {
+        if (val == null || val.trim().length() == 0)
+            return "";
+        YFCDate dt;
+        if (val.indexOf('T') >= 0)
+            dt = new YFCDate(val, YFCDate.XML_DATE_FORMAT, ignoreTime);
+        else
+            dt = new YFCDate(val, YFCDate.SMALL_XML_DATE_FORMAT, ignoreTime);
+        return dt.getString(getDateFormat(ignoreTime), getLocale());
+    }
+    
+    public String getCurrencySymbol(String val) {
+    	/** if you want to avoid hard-coding symbols, do as follows:
+    	* Call Yantra API to get currency definitions
+    	* Cache the output for performance
+    	* lookup that out put and return configured symbol
+    	*/
+    	String symbol = "";
+    	if (val != null) {
+    		if ("USD".equals(val))
+    			symbol = "$";
+    	}
+		return symbol;
+    }
+
+	public YFCElement getElement(YFCDocument outXml, String xmlPath) {
+		YFCElement ele = null;
+		StringTokenizer stk = new StringTokenizer(xmlPath,"/");
+		boolean firstTime = true;
+		while (stk.hasMoreTokens()) {
+			String tkn = stk.nextToken();
+			if (firstTime) {
+				ele = outXml.getDocumentElement();
+				firstTime = false;
+			}
+			else {
+				ele = ele.getChildElement(tkn);
+			}
+		}
+		return ele;
+	}
+	
+    public String getAttribute(YFCElement ele, String attrName, String dataType) throws Exception {
+        String attr = attrName;
+        if (attr.startsWith("/")) {
+            attr = attr.substring(1);
+            ele = ele.getOwnerDocument().getDocumentElement();
+        }
+        if (attr.startsWith("@")) {
+            attr = attr.substring(1);
+        }
+        else {
+            StringTokenizer stk = new StringTokenizer(attrName,"/");
+            while (stk.hasMoreTokens() && ele != null) {
+                String tkn = stk.nextToken();
+                if (tkn.startsWith("@")) {
+                    attr = tkn.substring(1);
+                    break;
+                }
+                else
+                    ele = ele.getChildElement(tkn);
+            }
+        }
+        if (ele == null)
+            return "";
+        if ("String".equals(dataType))
+            return ele.getAttribute(attr);
+        else if ("Integer".equals(dataType))
+            return getFormattedInt(ele.getIntAttribute(attr));
+        else if ("Long".equals(dataType))
+            return getFormattedLong(ele.getLongAttribute(attr));
+        else if ("Double".equals(dataType))
+            return getFormattedDouble(ele.getDoubleAttribute(attr));
+        else if ("Date".equals(dataType))
+            return getFormattedDate(ele.getAttribute(attr), true);
+        else if ("Timestamp".equals(dataType))
+            return getFormattedDate(ele.getAttribute(attr), false);
+        else if ("Currency".equals(dataType))
+            return getCurrencySymbol(ele.getAttribute(attr));
+        else
+            return ele.getAttribute(attr);
+    }
+    
+    public Locale getLocale() {
+	  /** If you need to use user's locale, access it from appropriate place (typically portlet context)
+	  * and return that value. Currently, for all users, US locale will be used
+	  */
+        return Locale.US;
+    }
+    
+    public String getDateFormat(boolean ignoreTime) {
+	  /** If you need to use user's preferred date and time format, access it from appropriate place
+	  * (typically portlet context) and return that value. 
+	  * Currently, for all users, US format will be used
+	  */
+        if (ignoreTime)
+            return "MM/dd/yyyy";
+        else
+            return "MM/dd/yyyy HH:mm:ss";
+    }
+    
+    public String getOrg(String userId) {
+        return "DEFAULT"; // need to call API to get this
+    }
+    
+    public String getUserId() throws Exception {
+        String user = prequest.getRemoteUser();
+        if (user == null && prequest instanceof PortletRequest)
+           user = ((PortletRequest)prequest).getUser().getUserID();
+        if (user == null || user.trim().length() == 0)
+            throw new Exception("Unknown User");
+        return user;
+    }
+    
+    public String getUrl(String origUrl) {
+    	return "javascript:openYantra('"+URLEncoder.encode(origUrl)+"');";
+    }
+    
+%>

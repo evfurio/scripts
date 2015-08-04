@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenericTest name="TFS71335_Should_checkout_as_authenticated_user_utilizing_profile_service_version_2" storage="TFS71335_Should_checkout_as_authenticated_user_utilizing_profile_service_version_2.generictest" id="63eb9b90-f7c5-11e3-a995-ecf4bb032d48" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+	<Command filename="%QAAUTOMATION_TOOLS%\QAAutomation\bin\d-Con.bat" arguments="%QAAUTOMATION_SCRIPTS%\GameStop\Spec\UI\GS\subscribe_unsubscribe_to_mailing_list_spec.rb  --browser chrome --csv %QAAUTOMATION_SCRIPTS%\GameStop\spec\UI\GS\checkout_dataset.csv --range TFS71335 --login gsui_20140606_140841_936@qagsecomprod.oib.com --password T3sting1 --or " workingDirectory="%QAAUTOMATION_TOOLS%\QAAutomation\bin">
+		<EnvironmentVariables>
+			<EnvironmentVariable name="qaautomation_tools" value="C:\dev\QAAutomationCurrent" />
+			<EnvironmentVariable name="path" value="%QAAUTOMATION_TOOLS%\QAAutomation\bin;C:Program Files (x86)\Sikuli X\libs;C:\Program Files (x86)\Java\jre6\bin" />
+		</EnvironmentVariables>
+	</Command>
+<SummaryXmlFile path="%TestOutputDirectory%\&lt;Enter summary file name here&gt;" />
+</GenericTest>

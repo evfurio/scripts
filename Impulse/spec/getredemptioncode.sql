@@ -1,0 +1,1 @@
+select top 1 Code from store.dbo.store_RedemptionCodes where OrderDetailID is null and ProdID = 'ESD-QA1-AUTO1';

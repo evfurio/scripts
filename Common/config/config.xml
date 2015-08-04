@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding"UTF-8"?>
+
+<config>
+<!-- Master Automation Environment Configuration -->
+	<testenv = "QA">
+		<settings> 
+			<prop env= "GS" env_num = "1">
+				<!-- Site or Application URLs -->
+				<urls>
+					<site gs = "http://qa.gamestop.com">
+					<site mgs = "http://m.qa.gamestop.com">
+					<site pur = "https://qa.gamestop.com/poweruprewards">
+					<site mpur = "https://m.qa.gamestop.com/poweruprewards">
+					<site csportal = "">
+					<site webmaint = "">
+					<site grandcentral = "">
+					<site linkshare1 = "http://click.linksynergy.com/fs-bin/click?id=lMh2Xiq9xN0&offerid=290242.10001320&type=3&subid=0">
+					<site linkshare2 = "http://click.linksynergy.com/fs-bin/click?id=lMh2Xiq9xN0&offerid=290242.10001321&type=3&subid=0">
+					<site ef1 = "http://pixel.everesttech.net/3284/cq?ev_sid=3&ev_cmpid=99999&ev_ln=foo&ev_crx=12345&ev_mt=b&ev_n=s&ev_ltx=&ev_pl=&ev_pos=3&url=http://qa.gamestop.com">
+				</urls>
+				<webservices>
+					<!-- GameStop CS Application Services -->
+					<ws configuration="http://qa.services.gamestop.com/Ecom/Configuration/v1/ConfigurationDataService.svc?wsdl"> 
+					<ws account="https://qa.services.gamestop.com/Ecom/Customers/v1/AccountService.svc" account_wsdl="http://qa.services.gamestop.com/Ecom/Customers/v1/AccountService.svc?wsdl">		
+					<ws profile="http://qa.services.gamestop.com/Ecom/Customers/v2/ProfileService.svc?wsdl=wsdl0"> 		
+					<ws cart="http://qa.services.gamestop.com/Ecom/Orders/v1/CartService.svc?wsdl">		
+					<ws purchaseorder="http://qa.services.gamestop.com/Ecom/Orders/v1/PurchaseOrderService.svc?wsdl">			
+					<ws shipping="http://qa.services.gamestop.com/Ecom/Orders/v1/ShippingService.svc?wsdl">			
+					<ws velocity="http://qa.services.gamestop.com/Ecom/Orders/v1/VelocityService.svc?wsdl">		
+					<ws tax="http://qa.services.gamestop.com/Ecom/Tax/v1/TaxService.svc" tax_wsdl="http://qa.services.gamestop.com/Ecom/Tax/v1/TaxService.svc?wsdl">		
+					<ws digitalcontent="http://qa.services.gamestop.com/Ecom/Fulfillment/v1/DigitalContentService.svc?wsdl">			
+					<ws digitalwallet="https://qa.services.gamestop.com/Ecom/DigitalWallet/v1/DigitalWalletService.svc" digitalwallet_wsdl="http://qa.services.gamestop.com/Ecom/DigitalWallet/v1/DigitalWalletService.svc?wsdl=wsdl1">			
+					<ws barcode="http://qa.services.gamestop.com/Ecom/Merchandising/v1/BarcodeService.svc" barcode_wsdl="http://qa.services.gamestop.com/Ecom/Merchandising/v1/BarcodeService.svc?wsdl=wsdl1">
+					<ws catalog="http://qa.services.gamestop.com/Ecom/Merchandising/v1/CatalogService.svc?wsdl">		
+					<ws tradevalue="http://qa.services.gamestop.com/Ecom/Merchandising/v1/TradeValueService.svc?wsdl">			
+					<ws fraud="http://qa.services.gamestop.com/Ecom/PaymentAndFraud/Fraud/v1/FraudService.svc?wsdl"> 			
+					<ws payment="https://qa.services.gamestop.com/Ecom/PaymentAndFraud/Payment/v4/PaymentService.svc" payment_wsdl="http://qa.services.gamestop.com/Ecom/PaymentAndFraud/Payment/v4/PaymentService.svc?wsdl">			
+					<ws storesearch="http://qa.services.gamestop.com/Ecom/Stores/v1/StoreSearchService.svc?wsdl"> 
+					
+					<!-- Enterprise Services -->
+					<ws loyaltyenrollment="http://bwservicesqa.testgs.pvt/Marketing/LoyaltyLifecycle/LoyaltyMembershipService" loyaltychannel="%Q[file:///#{ENV['QAAUTOMATION_FINDERS']}/Common/Services/src/Tibco/LoyaltyMembershipService-V1.wsdl]">		
+					<ws multipass="https://multipassservicechannelqa.testgs.pvt/MAIN/MultiPassService.svc" multipass_wsdl="https://multipassservicechannelqa.testgs.pvt/MAIN/MultiPassService.svc?WSDL">		
+					<ws customerprofile="http://bwservicesqa.testgs.pvt/Marketing/CustomerProfile/CustomerProfileServiceV2" customerprofile_wsdl="%Q[file:///#{ENV['QAAUTOMATION_FINDERS']}/Common/Services/src/Tibco/CustomerProfileServiceV2.wsdl]">			
+					<ws membershipservice="http://CSLMembershipServiceQA.TestGS.pvt/MAIN/MembershipService.svc?WSDL">			
+					<ws customerservice="http://cslcustomerserviceqa.testgs.pvt/MAIN/CustomerService.svc?wsdl">
+					<ws storeinformation="http://cslstoreinformationserviceqa.testgs.pvt/MAIN/StoreInformationService.svc?wsdl">
+				</webservices>
+			</prop>
+			
+			<prop env= "GS" env_num = "2">
+				<!-- Site or Application URLs -->
+				<urls>
+					<site gs = "http://qa2.gamestop.com" >
+					<site mgs = "http://m.qa2.gamestop.com">
+				</urls>
+				<webservices>
+				</webservices>
+			</prop>
+			
+			<!-- Database Connection Strings 
+			While QA shares the same database connections we don't need to include this in the prop configs by env num right now
+			-->
+			<databases>
+				<connectionstring name = "cs_catalog" server = "DL1GSQDB10SQL1.testecom.pvt\INST1" database = "Gamestop_productcatalog">
+				<connectionstring name = "cs_profiles" server = "DL1GSQDB10SQL2.testecom.pvt\INST2" database = "Gamestop_profiles">
+				<connectionstring name = "cs_orders" server = "DL1GSQDB10SQL3.testecom.pvt\INST3" database = "Gamestop_OrderStore">
+				<connectionstring name = "payment" server = "DL1SCQDB01SQL25.testecom.pvt\INST25" database = "PaymentGateway">
+				<connectionstring name = "wallet" server = "DL1SCQDB01SQL25.testecom.pvt\INST25" database = "DigitalWallet">
+				<connectionstring name = "profile" server = "GV1HQQDB50sql01.testgs.pvt\inst01" database = "Profile">
+				<connectionstring name = "store_info" server = "GV1HQQDB50SQL03.testgs.pvt\INST03" database = "StoreInformation">
+			</databases>
+			
+			<tool_settings>
+				<connectionstring name="octopus" host = "http://cibuilds.gamestop.com" port = "8888" api_key = "API-3VGWSZGHVXKTUOKVMATMTHJK3RE" username = "" password = "">
+				<connectionstring name="teamcity" host = "" port = "" api_key = "" username = "" password = "">
+				<connectionstring name="dm9000" host = "" port = "" api_key = "" username = "" password = "">
+				<connectionstring name="tfs" host = "" port = "" api_key = "" username = "" password = "">
+				<connectionstring name="rally" host = "" port = "" api_key = "" username = "" password = "">
+				<connectionstring name="github" host = "" port = "" api_key = "" username = "" password = "">
+			</tool_settings>
+			
+		</settings>
+	</testenv>
+</config>
